@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Latam Services | Consulting & Nearshore Accounting for U.S. Companies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Latam Services is a professional consulting and nearshore accounting team based in Argentina, serving U.S. companies with accounting, AP, bank reconciliations, financial reporting, tax support and management control. Experience with Birge & Held, Cornerstone, Drinks2Go, EY (Fiat, Nissan) and Renault." />
+  <style>
+    :root {
+      --bg: #F4F5F7;
+      --surface: #ffffff;
+      --primary: #0C2642;
+      --accent: #18A57B;
+      --muted: #6C7480;
+      --border: #E6E8EC;
+      --heading: #102033;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: #17212C;
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    .topbar {
+      background: #0C2642;
+      color: #fff;
+      font-size: 0.7rem;
+      text-align: right;
+      padding: 6px 15px;
+    }
+    .topbar a { color: #fff; text-decoration: none; }
+    header {
+      background: radial-gradient(circle at top, rgba(12,38,66,0.98) 0%, rgba(12,38,66,0.85) 40%, rgba(12,38,66,0.6) 75%), url('hero-latam.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 18px 20px 90px;
+    }
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .brand-logo {
+      width: 30px; height: 30px; border-radius: 10px;
+      background: rgba(255,255,255,0.16);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 700;
+    }
+    .brand-name {
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      font-size: 0.9rem;
+    }
+    .nav-links a {
+      margin-left: 18px;
+      text-decoration: none;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.8rem;
+    }
+    .nav-links a:hover { color: #fff; }
+    .hero {
+      max-width: 1180px;
+      margin: 70px auto 0;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .hero-pill {
+      background: rgba(24,165,123,0.18);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      display: inline-block;
+      letter-spacing: .4px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .hero-title {
+      font-size: clamp(2.35rem, 4vw, 3rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+    .hero-sub {
+      max-width: 550px;
+      opacity: .9;
+      margin-bottom: 18px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.83rem;
+    }
+    .btn-primary {
+      background: #fff;
+      color: #0C2642;
+      margin-right: 10px;
+    }
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.5);
+      color: #fff;
+    }
+    .hero-panel {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 20px 22px 16px;
+      backdrop-filter: blur(12px);
+    }
+    .hero-panel h3 {
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    .mini-metric {
+      background: rgba(12,38,66,0.4);
+      border-radius: 8px;
+      padding: 9px 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: .73rem;
+    }
+    main { }
+    section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 60px 20px 0;
+    }
+    h2.section-title {
+      font-size: 1.6rem;
+      margin-bottom: 6px;
+      color: var(--heading);
+    }
+    p.section-sub {
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 25px;
+    }
+    .clients-row {
+      display: flex; flex-wrap: wrap; gap: 12px;
+    }
+    .client-tag {
+      background: #fff;
+      border: 1px solid #E9EBF0;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #1F2A37;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 22px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #E6E8EC;
+      border-radius: 12px;
+      padding: 20px 20px 16px;
+      box-shadow: 0 10px 35px rgba(12,38,66,0.03);
+    }
+    .card small {
+      text-transform: uppercase;
+      font-size: 0.63rem;
+      letter-spacing: 0.4px;
+      color: #718095;
+    }
+    .card h3 {
+      margin-top: 8px;
+      font-size: 1.05rem;
+    }
+    .two-cols {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 28px;
+    }
+    .list-check {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .list-check li {
+      margin-bottom: 10px;
+      padding-left: 18px;
+      position: relative;
+      font-size: .87rem;
+    }
+    .list-check li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
+      gap: 18px;
+      margin-top: 15px;
+    }
+    .process-step {
+      background: #fff;
+      border-left: 4px solid rgba(24,165,123,0.7);
+      border-radius: 10px;
+      padding: 14px 15px 10px;
+    }
+    .process-step small {
+      font-size: .6rem;
+      text-transform: uppercase;
+      color: #7A8696;
+    }
+    .badges {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    .badge {
+      background: #fff;
+      border: 1px solid #E6E8EC;
+      padding: 4px 9px;
+      border-radius: 6px;
+      font-size: .68rem;
+      color: #0C2642;
+    }
+    .contact {
+      background: #fff;
+      border: 1px solid #E6E8EC;
+      border-radius: 14px;
+      padding: 24px 24px 6px;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 30px;
+      margin-bottom: 70px;
+    }
+    form label {
+      display:block;
+      font-size: .7rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 8px 9px;
+      border: 1px solid #D6D9DF;
+      border-radius: 7px;
+      font-family: inherit;
+      margin-bottom: 12px;
+      font-size: .8rem;
+    }
+    form button {
+      background: #0C2642;
+      color: #fff;
+      border: none;
+      padding: 9px 16px;
+      border-radius: 7px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    footer {
+      background: #0C1723;
+      color: #A9B7C6;
+      text-align: center;
+      padding: 30px 20px 40px;
+      font-size: .75rem;
+      margin-top: 40px;
+    }
+    .industries {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .industry-card {
+      background: #fff;
+      border: 1px solid #E6E8EC;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: #233044;
+    }
+    .flex-line { display: flex; gap: 10px; flex-wrap: wrap; }
+    @media (max-width: 980px) {
+      .hero, .two-cols, .contact {
+        grid-template-columns: 1fr;
+      }
+      .nav-links { display: none; }
+      header { padding-bottom: 70px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  Contact us: <a href="mailto:contact@latamservices.us">contact@latamservices.us</a>
+</div>
+
+<header>
+  <nav class="nav">
+    <div class="brand">
+      <div class="brand-logo">LS</div>
+      <div class="brand-name">LATAM SERVICES</div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <div class="hero-pill">Consulting & Nearshore Accounting</div>
+      <h1 class="hero-title">A professional team to run your accounting, AP and financial reporting.</h1>
+      <p class="hero-sub">Based in Argentina, currently serving U.S. businesses such as <strong>Birge &amp; Held</strong>, <strong>Cornerstone</strong> and <strong>Drinks2Go</strong>. We also bring EY audit experience for <strong>Fiat</strong> and <strong>Nissan</strong>, plus management control work for <strong>Renault</strong>.</p>
+      <a href="#contact" class="btn btn-primary">Request a consultation</a>
+      <a href="#services" class="btn btn-secondary">View full services</a>
+    </div>
+    <div class="hero-panel">
+      <h3>Delivery aligned with U.S. standards</h3>
+      <div class="mini-metric">
+        <div>
+          <div style="font-size:.59rem; text-transform:uppercase; opacity:.8;">Active U.S. clients</div>
+          <div style="font-weight:700;">3 companies</div>
+        </div>
+        <div>
+          <div style="font-size:.59rem; text-transform:uppercase; opacity:.8;">Core work</div>
+          <div style="font-weight:700;">AP, Recs, Reporting</div>
+        </div>
+      </div>
+      <p style="font-size:.72rem; opacity:.85;">“Latam Services operates like a small consulting unit: clear scope, monthly deliverables and documentation so U.S. controllers can review fast.”</p>
+      <p style="font-size:.65rem; opacity:.6; margin-top:16px;">We can work in your SharePoint / Teams / GDrive environment.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="about">
+  <h2 class="section-title">About Latam Services</h2>
+  <p class="section-sub">Latam Services is a consulting and outsourcing boutique specializing in accounting, finance and operational support for U.S. companies. We combine real U.S. client work with Big Four experience and management control in the automotive industry.</p>
+  <div class="two-cols" style="margin-top:20px;">
+    <div>
+      <h3 style="margin-top:0;">U.S. clients & international background</h3>
+      <p>We currently support U.S. companies such as <strong>Birge &amp; Held</strong>, <strong>Cornerstone</strong> and <strong>Drinks2Go</strong>. Our team members have also worked at <strong>EY Argentina</strong> serving <strong>Fiat</strong> and <strong>Nissan</strong>, and performed management control and performance reporting for <strong>Renault</strong>.</p>
+      <div class="clients-row">
+        <span class="client-tag">Birge &amp; Held (U.S.)</span>
+        <span class="client-tag">Cornerstone (U.S.)</span>
+        <span class="client-tag">Drinks2Go (U.S.)</span>
+        <span class="client-tag">EY Argentina</span>
+        <span class="client-tag">Fiat</span>
+        <span class="client-tag">Nissan</span>
+        <span class="client-tag">Renault (Mgmt Control)</span>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin-top:0;">What makes us different</h3>
+      <ul class="list-check">
+        <li>We understand month-end discipline and U.S. reporting calendars.</li>
+        <li>We deliver as a team — not as a single freelancer.</li>
+        <li>We document workpapers so your CPA/controller can review fast.</li>
+        <li>We can take over repetitive AP and reconciliation tasks.</li>
+        <li>We offer secondary technical consulting (engineering, architecture, programming) for companies expanding in LATAM.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Core consulting & outsourcing services</h2>
+  <p class="section-sub">We can act as your external accounting team or support your internal finance department.</p>
+  <div class="grid-3">
+    <div class="card">
+      <small>Accounting & AP</small>
+      <h3>Accounts Payable operations</h3>
+      <p>Invoice intake, vendor statements, 3-way match, payment run prep, and documentation in your system (QuickBooks, RealPage, AppFolio or Excel-driven flows).</p>
+    </div>
+    <div class="card">
+      <small>Finance</small>
+      <h3>Bank reconciliations & GL</h3>
+      <p>Monthly bank recs, GL review, balance sheet audit files, variance explanations — ideal for real estate and service companies.</p>
+    </div>
+    <div class="card">
+      <small>Reporting</small>
+      <h3>Month-end & management reporting</h3>
+      <p>Property-level or entity-level reporting, KPI dashboards, and support for U.S. controllers and CPA firms.</p>
+    </div>
+    <div class="card">
+      <small>Tax support</small>
+      <h3>Data prep for CPA firms</h3>
+      <p>Workpapers, schedules, 1099 support, organized folders (SharePoint / GDrive) to speed up filing.</p>
+    </div>
+    <div class="card">
+      <small>Management control</small>
+      <h3>Budget vs actual / performance</h3>
+      <p>Experience in Renault-style management control: tracking of costs, variances and periodic reporting for management.</p>
+    </div>
+    <div class="card">
+      <small>Process & automation</small>
+      <h3>Programming & process improvement</h3>
+      <p>Python, Excel, SharePoint and Power Automate flows to reduce manual steps in AP, reconciliations and reporting.</p>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <h2 class="section-title">How we work</h2>
+  <p class="section-sub">Clear stages, documented delivery and communication adapted to U.S. teams.</p>
+  <div class="process-grid">
+    <div class="process-step">
+      <small>Stage 1</small>
+      <h3>30-min discovery</h3>
+      <p>We map your entities, systems, volume and deadlines. We review your actual files (recs, AP, reports).</p>
+    </div>
+    <div class="process-step">
+      <small>Stage 2</small>
+      <h3>Scope & pricing</h3>
+      <p>We send a concise scope with the services, frequency and a fixed monthly fee or hourly model.</p>
+    </div>
+    <div class="process-step">
+      <small>Stage 3</small>
+      <h3>Onboarding & access</h3>
+      <p>We set up users, shared folders, SOPs and escalation channels (email, Teams, WhatsApp).</p>
+    </div>
+    <div class="process-step">
+      <small>Stage 4</small>
+      <h3>Recurring delivery</h3>
+      <p>Same calendar every month: recs, AP and reports arrive on the agreed dates.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Why U.S. companies work with us</h2>
+  <div class="two-cols">
+    <div class="card">
+      <h3>Nearshore advantage</h3>
+      <p>We work from Argentina in a time zone that is friendly to U.S. teams. We can join calls, clarify questions and work on your schedule.</p>
+      <div class="badges">
+        <span class="badge">Bilingual team</span>
+        <span class="badge">Cost-efficient</span>
+        <span class="badge">Real U.S. experience</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Not just bookkeeping</h3>
+      <p>We understand the logic behind management control, audit requirements (EY) and reporting for big clients (Fiat, Nissan, Renault). So we prepare files that are review-ready.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Industries we understand</h2>
+  <p class="section-sub">Because of our current and past work, we already speak the language of these sectors.</p>
+  <div class="industries">
+    <div class="industry-card">U.S. Real Estate / Property</div>
+    <div class="industry-card">Services & SMEs</div>
+    <div class="industry-card">Automotive / Industrial (Fiat, Nissan)</div>
+    <div class="industry-card">AP-heavy operations</div>
+    <div class="industry-card">Consulting / professional services</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Engagement models</h2>
+  <p class="section-sub">Choose the model that fits how your team operates.</p>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Fixed monthly retainer</h3>
+      <p>We define a clear scope (AP + recs + reporting) and deliver every month. Best for real estate and recurring work.</p>
+    </div>
+    <div class="card">
+      <h3>Dedicated nearshore team</h3>
+      <p>You get a named resource (or 2) working only on your entities, with a backup person from our team.</p>
+    </div>
+    <div class="card">
+      <h3>Project-based</h3>
+      <p>For specific tasks: cleanup, backlog of reconciliations, audit preparation, process automation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Let’s talk about your accounting & finance needs</h2>
+  <p class="section-sub">Tell us what you need to delegate and we’ll let you know in 24–48 hours how we can support you.</p>
+  <div class="contact">
+    <form>
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" placeholder="Your name" />
+      <label for="company">Company</label>
+      <input id="company" name="company" type="text" placeholder="Your company" />
+      <label for="email">Corporate email</label>
+      <input id="email" name="email" type="email" placeholder="you@company.com" />
+      <label for="service">Service you need</label>
+      <select id="service" name="service">
+        <option>Accounts Payable / AP</option>
+        <option>Bank Reconciliations</option>
+        <option>Month-end reporting</option>
+        <option>Tax / audit workpapers</option>
+        <option>Management control</option>
+        <option>Process automation</option>
+        <option>Other / Not sure</option>
+      </select>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Describe your entities, systems and deadlines..."></textarea>
+      <button type="submit">Send message</button>
+    </form>
+    <div>
+      <h3>Direct contact</h3>
+      <p>Email: <a href="mailto:contact@latamservices.us">contact@latamservices.us</a></p>
+      <p>Location: Argentina (nearshore to U.S.)</p>
+      <p>Current U.S. clients: Birge &amp; Held, Cornerstone, Drinks2Go.</p>
+      <p>Corporate background: EY (audit to Fiat &amp; Nissan), Renault (management control).</p>
+      <p style="font-size:.75rem; color:var(--muted); margin-top:10px;">We can sign NDAs and work inside your current Microsoft 365 / SharePoint / Teams setup.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Latam Services. Consulting & Nearshore Accounting for U.S. Companies.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
