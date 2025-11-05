@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Latam Services | Consulting & Nearshore Accounting for U.S. Companies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Latam Services is a professional consulting and nearshore accounting team based in Argentina, serving U.S. companies with accounting, AP, bank reconciliations, financial reporting, tax support and management control. Experience with Birge & Held, Cornerstone, Drinks2Go, EY (Fiat, Nissan) and Renault." />
+  <meta name="description" content="Latam Services is a professional consulting and nearshore accounting firm based in Argentina. We support U.S. companies with accounting, AP, bank reconciliations, financial reporting, tax support and process automation. Experience with Birge & Held, Cornerstone, Drinks2Go, PwC Argentina (Tax), EY (Fiat, Nissan) and Renault." />
   <style>
     :root {
       --bg: #F4F5F7;
@@ -133,7 +133,6 @@
       justify-content: space-between;
       font-size: .73rem;
     }
-    main { }
     section {
       max-width: 1180px;
       margin: 0 auto;
@@ -146,7 +145,7 @@
     }
     p.section-sub {
       color: var(--muted);
-      max-width: 620px;
+      max-width: 700px;
       margin-bottom: 25px;
     }
     .clients-row {
@@ -160,6 +159,11 @@
       font-size: 0.75rem;
       font-weight: 600;
       color: #1F2A37;
+    }
+    .two-cols {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 28px;
     }
     .grid-3 {
       display: grid;
@@ -183,11 +187,6 @@
     .card h3 {
       margin-top: 8px;
       font-size: 1.05rem;
-    }
-    .two-cols {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 28px;
     }
     .list-check {
       list-style: none;
@@ -224,16 +223,20 @@
       text-transform: uppercase;
       color: #7A8696;
     }
-    .badges {
-      display: flex; gap: 8px; flex-wrap: wrap;
+    .tech-stack {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px,1fr));
+      gap: 12px;
+      margin-top: 14px;
     }
-    .badge {
+    .tech-item {
       background: #fff;
       border: 1px solid #E6E8EC;
-      padding: 4px 9px;
-      border-radius: 6px;
-      font-size: .68rem;
-      color: #0C2642;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: .77rem;
+      font-weight: 600;
+      color: #203046;
     }
     .contact {
       background: #fff;
@@ -277,22 +280,6 @@
       font-size: .75rem;
       margin-top: 40px;
     }
-    .industries {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
-      gap: 14px;
-      margin-top: 16px;
-    }
-    .industry-card {
-      background: #fff;
-      border: 1px solid #E6E8EC;
-      border-radius: 10px;
-      padding: 12px 14px;
-      font-size: .8rem;
-      font-weight: 600;
-      color: #233044;
-    }
-    .flex-line { display: flex; gap: 10px; flex-wrap: wrap; }
     @media (max-width: 980px) {
       .hero, .two-cols, .contact {
         grid-template-columns: 1fr;
@@ -317,6 +304,7 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#technology">Technology</a>
       <a href="#approach">Approach</a>
       <a href="#contact">Contact</a>
     </div>
@@ -325,13 +313,16 @@
   <div class="hero">
     <div>
       <div class="hero-pill">Consulting & Nearshore Accounting</div>
-      <h1 class="hero-title">A professional team to run your accounting, AP and financial reporting.</h1>
-      <p class="hero-sub">Based in Argentina, currently serving U.S. businesses such as <strong>Birge &amp; Held</strong>, <strong>Cornerstone</strong> and <strong>Drinks2Go</strong>. We also bring EY audit experience for <strong>Fiat</strong> and <strong>Nissan</strong>, plus management control work for <strong>Renault</strong>.</p>
+      <h1 class="hero-title">A professional team to run your accounting, AP, tax support and financial reporting.</h1>
+      <p class="hero-sub">
+        Based in Argentina, currently serving U.S. businesses such as <strong>Birge &amp; Held</strong>, <strong>Cornerstone</strong> and <strong>Drinks2Go</strong>.
+        Our leadership includes experience as <strong>Tax Senior at PwC Argentina</strong>, audit work at <strong>EY (Fiat, Nissan)</strong> and management control at <strong>Renault</strong>.
+      </p>
       <a href="#contact" class="btn btn-primary">Request a consultation</a>
       <a href="#services" class="btn btn-secondary">View full services</a>
     </div>
     <div class="hero-panel">
-      <h3>Delivery aligned with U.S. standards</h3>
+      <h3>U.S.-oriented delivery</h3>
       <div class="mini-metric">
         <div>
           <div style="font-size:.59rem; text-transform:uppercase; opacity:.8;">Active U.S. clients</div>
@@ -342,8 +333,8 @@
           <div style="font-weight:700;">AP, Recs, Reporting</div>
         </div>
       </div>
-      <p style="font-size:.72rem; opacity:.85;">“Latam Services operates like a small consulting unit: clear scope, monthly deliverables and documentation so U.S. controllers can review fast.”</p>
-      <p style="font-size:.65rem; opacity:.6; margin-top:16px;">We can work in your SharePoint / Teams / GDrive environment.</p>
+      <p style="font-size:.72rem; opacity:.85;">“We operate like a boutique consulting team: clear scope, documented workpapers and alignment with U.S. reporting calendars.”</p>
+      <p style="font-size:.65rem; opacity:.6; margin-top:16px;">We can work inside your SharePoint / Teams / GDrive / RealPage environment.</p>
     </div>
   </div>
 </header>
@@ -352,29 +343,35 @@
 
 <section id="about">
   <h2 class="section-title">About Latam Services</h2>
-  <p class="section-sub">Latam Services is a consulting and outsourcing boutique specializing in accounting, finance and operational support for U.S. companies. We combine real U.S. client work with Big Four experience and management control in the automotive industry.</p>
+  <p class="section-sub">Latam Services is a consulting and outsourcing boutique specializing in accounting, tax support, finance operations and process automation for U.S. companies, delivered from Argentina.</p>
   <div class="two-cols" style="margin-top:20px;">
     <div>
-      <h3 style="margin-top:0;">U.S. clients & international background</h3>
-      <p>We currently support U.S. companies such as <strong>Birge &amp; Held</strong>, <strong>Cornerstone</strong> and <strong>Drinks2Go</strong>. Our team members have also worked at <strong>EY Argentina</strong> serving <strong>Fiat</strong> and <strong>Nissan</strong>, and performed management control and performance reporting for <strong>Renault</strong>.</p>
+      <h3 style="margin-top:0;">International & Big Four background</h3>
+      <p>
+        Our team combines real U.S. client work with experience in top-tier firms in Argentina. One of our founders worked as
+        <strong>Tax Senior at PwC Argentina</strong>, supporting U.S.-linked and local clients with tax compliance and documentation.
+        We also bring audit exposure from <strong>EY Argentina</strong> (engagements with <strong>Fiat</strong> and <strong>Nissan</strong>), and
+        management control / performance reporting for <strong>Renault</strong>.
+      </p>
       <div class="clients-row">
         <span class="client-tag">Birge &amp; Held (U.S.)</span>
         <span class="client-tag">Cornerstone (U.S.)</span>
         <span class="client-tag">Drinks2Go (U.S.)</span>
-        <span class="client-tag">EY Argentina</span>
+        <span class="client-tag">PwC Argentina — Tax Senior</span>
+        <span class="client-tag">EY Argentina — Audit</span>
         <span class="client-tag">Fiat</span>
         <span class="client-tag">Nissan</span>
-        <span class="client-tag">Renault (Mgmt Control)</span>
+        <span class="client-tag">Renault — Mgmt Control</span>
       </div>
     </div>
     <div>
-      <h3 style="margin-top:0;">What makes us different</h3>
+      <h3 style="margin-top:0;">What this means for U.S. companies</h3>
       <ul class="list-check">
-        <li>We understand month-end discipline and U.S. reporting calendars.</li>
-        <li>We deliver as a team — not as a single freelancer.</li>
-        <li>We document workpapers so your CPA/controller can review fast.</li>
-        <li>We can take over repetitive AP and reconciliation tasks.</li>
-        <li>We offer secondary technical consulting (engineering, architecture, programming) for companies expanding in LATAM.</li>
+        <li>We understand what CPAs and controllers need to see in the workpapers.</li>
+        <li>We know how to document for tax purposes (because of PwC background).</li>
+        <li>We are used to audit-level quality (EY, automotive multinationals).</li>
+        <li>We can report in English and follow U.S. cut-off dates.</li>
+        <li>We can expand the scope to engineering / architecture / programming if you centralize services with one vendor.</li>
       </ul>
     </div>
   </div>
@@ -382,12 +379,12 @@
 
 <section id="services">
   <h2 class="section-title">Core consulting & outsourcing services</h2>
-  <p class="section-sub">We can act as your external accounting team or support your internal finance department.</p>
+  <p class="section-sub">We can act as your external accounting team or support your internal finance/tax department.</p>
   <div class="grid-3">
     <div class="card">
       <small>Accounting & AP</small>
       <h3>Accounts Payable operations</h3>
-      <p>Invoice intake, vendor statements, 3-way match, payment run prep, and documentation in your system (QuickBooks, RealPage, AppFolio or Excel-driven flows).</p>
+      <p>Invoice intake, vendor statements, 3-way match, payment run prep, documentation in your system (RealPage, Yardi, QuickBooks or SAP).</p>
     </div>
     <div class="card">
       <small>Finance</small>
@@ -397,24 +394,42 @@
     <div class="card">
       <small>Reporting</small>
       <h3>Month-end & management reporting</h3>
-      <p>Property-level or entity-level reporting, KPI dashboards, and support for U.S. controllers and CPA firms.</p>
+      <p>Property/entity reporting, KPIs, support for U.S. controllers, Smartsheet / SharePoint trackers.</p>
     </div>
     <div class="card">
       <small>Tax support</small>
-      <h3>Data prep for CPA firms</h3>
-      <p>Workpapers, schedules, 1099 support, organized folders (SharePoint / GDrive) to speed up filing.</p>
+      <h3>Tax data & compliance</h3>
+      <p>Experience as Tax Senior (PwC Argentina). We prepare organized folders and schedules so your CPA can file faster.</p>
     </div>
     <div class="card">
       <small>Management control</small>
       <h3>Budget vs actual / performance</h3>
-      <p>Experience in Renault-style management control: tracking of costs, variances and periodic reporting for management.</p>
+      <p>Automotive-style cost tracking, dashboards, and management control based on the experience with Renault.</p>
     </div>
     <div class="card">
       <small>Process & automation</small>
-      <h3>Programming & process improvement</h3>
-      <p>Python, Excel, SharePoint and Power Automate flows to reduce manual steps in AP, reconciliations and reporting.</p>
+      <h3>Programming & flows</h3>
+      <p>Python, Excel, SharePoint and Power Automate workflows to reduce manual steps in AP, reconciliations and reporting.</p>
     </div>
   </div>
+</section>
+
+<section id="technology">
+  <h2 class="section-title">Technology & platforms we work with</h2>
+  <p class="section-sub">We adapt to the software stack you already use — especially common U.S. property/accounting systems.</p>
+  <div class="tech-stack">
+    <div class="tech-item">RealPage (Financial Suite / AP / Bank)</div>
+    <div class="tech-item">Yardi</div>
+    <div class="tech-item">QuickBooks Online / Desktop</div>
+    <div class="tech-item">SAP</div>
+    <div class="tech-item">Microsoft 365 / SharePoint</div>
+    <div class="tech-item">Smartsheet</div>
+    <div class="tech-item">Excel advanced (macros, formulas)</div>
+    <div class="tech-item">Power Automate / flows</div>
+  </div>
+  <p style="margin-top:14px; font-size:.78rem; color:var(--muted);">
+    We can work with your existing folder structure (SharePoint, Teams, GDrive) and follow your approval workflows. If you are migrating from Excel-based accounting to RealPage or Yardi, we can help stabilize the process.
+  </p>
 </section>
 
 <section id="approach">
@@ -424,7 +439,7 @@
     <div class="process-step">
       <small>Stage 1</small>
       <h3>30-min discovery</h3>
-      <p>We map your entities, systems, volume and deadlines. We review your actual files (recs, AP, reports).</p>
+      <p>We map your entities, systems (RealPage, Yardi, QuickBooks, SAP), volume and deadlines.</p>
     </div>
     <div class="process-step">
       <small>Stage 2</small>
@@ -445,37 +460,6 @@
 </section>
 
 <section>
-  <h2 class="section-title">Why U.S. companies work with us</h2>
-  <div class="two-cols">
-    <div class="card">
-      <h3>Nearshore advantage</h3>
-      <p>We work from Argentina in a time zone that is friendly to U.S. teams. We can join calls, clarify questions and work on your schedule.</p>
-      <div class="badges">
-        <span class="badge">Bilingual team</span>
-        <span class="badge">Cost-efficient</span>
-        <span class="badge">Real U.S. experience</span>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Not just bookkeeping</h3>
-      <p>We understand the logic behind management control, audit requirements (EY) and reporting for big clients (Fiat, Nissan, Renault). So we prepare files that are review-ready.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2 class="section-title">Industries we understand</h2>
-  <p class="section-sub">Because of our current and past work, we already speak the language of these sectors.</p>
-  <div class="industries">
-    <div class="industry-card">U.S. Real Estate / Property</div>
-    <div class="industry-card">Services & SMEs</div>
-    <div class="industry-card">Automotive / Industrial (Fiat, Nissan)</div>
-    <div class="industry-card">AP-heavy operations</div>
-    <div class="industry-card">Consulting / professional services</div>
-  </div>
-</section>
-
-<section>
   <h2 class="section-title">Engagement models</h2>
   <p class="section-sub">Choose the model that fits how your team operates.</p>
   <div class="grid-3">
@@ -489,7 +473,7 @@
     </div>
     <div class="card">
       <h3>Project-based</h3>
-      <p>For specific tasks: cleanup, backlog of reconciliations, audit preparation, process automation.</p>
+      <p>For specific tasks: cleanup, backlog of reconciliations, audit/tax preparation, process automation.</p>
     </div>
   </div>
 </section>
@@ -524,8 +508,8 @@
       <p>Email: <a href="mailto:contact@latamservices.us">contact@latamservices.us</a></p>
       <p>Location: Argentina (nearshore to U.S.)</p>
       <p>Current U.S. clients: Birge &amp; Held, Cornerstone, Drinks2Go.</p>
-      <p>Corporate background: EY (audit to Fiat &amp; Nissan), Renault (management control).</p>
-      <p style="font-size:.75rem; color:var(--muted); margin-top:10px;">We can sign NDAs and work inside your current Microsoft 365 / SharePoint / Teams setup.</p>
+      <p>Corporate background: PwC Argentina (Tax Senior), EY (Fiat &amp; Nissan), Renault (management control).</p>
+      <p style="font-size:.75rem; color:var(--muted); margin-top:10px;">We can sign NDAs and work inside your Microsoft 365 / SharePoint / Teams setup.</p>
     </div>
   </div>
 </section>
