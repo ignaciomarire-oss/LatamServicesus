@@ -1,528 +1,363 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Latam Services | Consulting & Nearshore Accounting for U.S. Companies</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Latam Services is a professional consulting and nearshore accounting firm based in Argentina. We support U.S. companies with accounting, AP, bank reconciliations, financial reporting, tax support and process automation. Experience with Birge & Held, Cornerstone, Drinks2Go, PwC Argentina (Tax), EY (Fiat, Nissan) and Renault." />
-  <style>
-    :root {
-      --bg: #F4F5F7;
-      --surface: #ffffff;
-      --primary: #0C2642;
-      --accent: #18A57B;
-      --muted: #6C7480;
-      --border: #E6E8EC;
-      --heading: #102033;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: #17212C;
-      line-height: 1.7;
-    }
-    a { color: inherit; }
-    .topbar {
-      background: #0C2642;
-      color: #fff;
-      font-size: 0.7rem;
-      text-align: right;
-      padding: 6px 15px;
-    }
-    .topbar a { color: #fff; text-decoration: none; }
-    header {
-      background: radial-gradient(circle at top, rgba(12,38,66,0.98) 0%, rgba(12,38,66,0.85) 40%, rgba(12,38,66,0.6) 75%), url('hero-latam.jpg') center/cover no-repeat;
-      color: #fff;
-      padding: 18px 20px 90px;
-    }
-    .nav {
-      max-width: 1180px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
-    .brand-logo {
-      width: 30px; height: 30px; border-radius: 10px;
-      background: rgba(255,255,255,0.16);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.7rem; font-weight: 700;
-    }
-    .brand-name {
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      font-size: 0.9rem;
-    }
-    .nav-links a {
-      margin-left: 18px;
-      text-decoration: none;
-      color: rgba(255,255,255,0.85);
-      font-size: 0.8rem;
-    }
-    .nav-links a:hover { color: #fff; }
-    .hero {
-      max-width: 1180px;
-      margin: 70px auto 0;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 50px;
-      align-items: center;
-    }
-    .hero-pill {
-      background: rgba(24,165,123,0.18);
-      padding: 6px 16px;
-      border-radius: 30px;
-      font-size: 0.7rem;
-      display: inline-block;
-      letter-spacing: .4px;
-      margin-bottom: 14px;
-      text-transform: uppercase;
-    }
-    .hero-title {
-      font-size: clamp(2.35rem, 4vw, 3rem);
-      line-height: 1.05;
-      margin-bottom: 18px;
-    }
-    .hero-sub {
-      max-width: 550px;
-      opacity: .9;
-      margin-bottom: 18px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.83rem;
-    }
-    .btn-primary {
-      background: #fff;
-      color: #0C2642;
-      margin-right: 10px;
-    }
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.5);
-      color: #fff;
-    }
-    .hero-panel {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 12px;
-      padding: 20px 22px 16px;
-      backdrop-filter: blur(12px);
-    }
-    .hero-panel h3 {
-      font-size: 1rem;
-      margin-top: 0;
-      margin-bottom: 12px;
-    }
-    .mini-metric {
-      background: rgba(12,38,66,0.4);
-      border-radius: 8px;
-      padding: 9px 10px;
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-      font-size: .73rem;
-    }
-    section {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 60px 20px 0;
-    }
-    h2.section-title {
-      font-size: 1.6rem;
-      margin-bottom: 6px;
-      color: var(--heading);
-    }
-    p.section-sub {
-      color: var(--muted);
-      max-width: 700px;
-      margin-bottom: 25px;
-    }
-    .clients-row {
-      display: flex; flex-wrap: wrap; gap: 12px;
-    }
-    .client-tag {
-      background: #fff;
-      border: 1px solid #E9EBF0;
-      padding: 6px 16px;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #1F2A37;
-    }
-    .two-cols {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 28px;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-      gap: 22px;
-      margin-top: 20px;
-    }
-    .card {
-      background: #fff;
-      border: 1px solid #E6E8EC;
-      border-radius: 12px;
-      padding: 20px 20px 16px;
-      box-shadow: 0 10px 35px rgba(12,38,66,0.03);
-    }
-    .card small {
-      text-transform: uppercase;
-      font-size: 0.63rem;
-      letter-spacing: 0.4px;
-      color: #718095;
-    }
-    .card h3 {
-      margin-top: 8px;
-      font-size: 1.05rem;
-    }
-    .list-check {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .list-check li {
-      margin-bottom: 10px;
-      padding-left: 18px;
-      position: relative;
-      font-size: .87rem;
-    }
-    .list-check li::before {
-      content: "•";
-      color: var(--accent);
-      position: absolute;
-      left: 0;
-      font-weight: 700;
-    }
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
-      gap: 18px;
-      margin-top: 15px;
-    }
-    .process-step {
-      background: #fff;
-      border-left: 4px solid rgba(24,165,123,0.7);
-      border-radius: 10px;
-      padding: 14px 15px 10px;
-    }
-    .process-step small {
-      font-size: .6rem;
-      text-transform: uppercase;
-      color: #7A8696;
-    }
-    .tech-stack {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px,1fr));
-      gap: 12px;
-      margin-top: 14px;
-    }
-    .tech-item {
-      background: #fff;
-      border: 1px solid #E6E8EC;
-      border-radius: 10px;
-      padding: 10px 12px;
-      font-size: .77rem;
-      font-weight: 600;
-      color: #203046;
-    }
-    .contact {
-      background: #fff;
-      border: 1px solid #E6E8EC;
-      border-radius: 14px;
-      padding: 24px 24px 6px;
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 30px;
-      margin-bottom: 70px;
-    }
-    form label {
-      display:block;
-      font-size: .7rem;
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-    form input, form textarea, form select {
-      width: 100%;
-      padding: 8px 9px;
-      border: 1px solid #D6D9DF;
-      border-radius: 7px;
-      font-family: inherit;
-      margin-bottom: 12px;
-      font-size: .8rem;
-    }
-    form button {
-      background: #0C2642;
-      color: #fff;
-      border: none;
-      padding: 9px 16px;
-      border-radius: 7px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    footer {
-      background: #0C1723;
-      color: #A9B7C6;
-      text-align: center;
-      padding: 30px 20px 40px;
-      font-size: .75rem;
-      margin-top: 40px;
-    }
-    @media (max-width: 980px) {
-      .hero, .two-cols, .contact {
-        grid-template-columns: 1fr;
-      }
-      .nav-links { display: none; }
-      header { padding-bottom: 70px; }
-    }
-  </style>
-</head>
-<body>
 
-<div class="topbar">
-  Contact us: <a href="mailto:contact@latamservices.us">contact@latamservices.us</a>
-</div>
+L
+LATAM SERVICES
 
-<header>
-  <nav class="nav">
-    <div class="brand">
-      <div class="brand-logo">LS</div>
-      <div class="brand-name">LATAM SERVICES</div>
-    </div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#technology">Technology</a>
-      <a href="#approach">Approach</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+Capabilities
+Live demo
+Savings calculator
+Finance health check
+Industries
+Approach
+Engagement models
+About
+FAQ
+Contact ↗
+International finance & operations consulting
+Global expertise.
+Built for what’s next.
+We help U.S. and international businesses run sharper finance, leaner operations and smarter processes — combining senior accounting expertise, automation and a nearshore team that works on your clock.
 
-  <div class="hero">
-    <div>
-      <div class="hero-pill">Consulting & Nearshore Accounting</div>
-      <h1 class="hero-title">A professional team to run your accounting, AP, tax support and financial reporting.</h1>
-      <p class="hero-sub">
-        Based in Argentina, currently serving U.S. businesses such as <strong>Birge &amp; Held</strong>, <strong>Cornerstone</strong> and <strong>Drinks2Go</strong>.
-        Our leadership includes experience as <strong>Tax Senior at PwC Argentina</strong>, audit work at <strong>EY (Fiat, Nissan)</strong> and management control at <strong>Renault</strong>.
-      </p>
-      <a href="#contact" class="btn btn-primary">Request a consultation</a>
-      <a href="#services" class="btn btn-secondary">View full services</a>
-    </div>
-    <div class="hero-panel">
-      <h3>U.S.-oriented delivery</h3>
-      <div class="mini-metric">
-        <div>
-          <div style="font-size:.59rem; text-transform:uppercase; opacity:.8;">Active U.S. clients</div>
-          <div style="font-weight:700;">3 companies</div>
-        </div>
-        <div>
-          <div style="font-size:.59rem; text-transform:uppercase; opacity:.8;">Core work</div>
-          <div style="font-weight:700;">AP, Recs, Reporting</div>
-        </div>
-      </div>
-      <p style="font-size:.72rem; opacity:.85;">“We operate like a boutique consulting team: clear scope, documented workpapers and alignment with U.S. reporting calendars.”</p>
-      <p style="font-size:.65rem; opacity:.6; margin-top:16px;">We can work inside your SharePoint / Teams / GDrive / RealPage environment.</p>
-    </div>
-  </div>
-</header>
+Book a discovery call
+↗
+Estimate your savings
+↓
+U.S.-registered
+Company
+Argentina-based
+Delivery team
+English · Español
+Bilingual
+FINANCE / INSIGHTPROCESS / AUTOMATIONU.S. HOURS / NEARSHORE
+RealPage
+Yardi
+QuickBooks
+SAP
+Microsoft 365
+Excel & Power Query
+Python automation
+AI-assisted workflows
+RealPage
+Yardi
+QuickBooks
+SAP
+Microsoft 365
+Excel & Power Query
+Python automation
+AI-assisted workflows
+Why LATAM SERVICES
+Big-firm standards.
+Boutique attention.
+You get the rigor of an international consultancy with a team that knows your files by name — at a cost structure that makes sense for growing businesses.
 
-<main>
+~70%
+of recurring AP, AR and reconciliation tasks automated in our live engagements
 
-<section id="about">
-  <h2 class="section-title">About Latam Services</h2>
-  <p class="section-sub">Latam Services is a consulting and outsourcing boutique specializing in accounting, tax support, finance operations and process automation for U.S. companies, delivered from Argentina.</p>
-  <div class="two-cols" style="margin-top:20px;">
-    <div>
-      <h3 style="margin-top:0;">International & Big Four background</h3>
-      <p>
-        Our team combines real U.S. client work with experience in top-tier firms in Argentina. One of our founders worked as
-        <strong>Tax Senior at PwC Argentina</strong>, supporting U.S.-linked and local clients with tax compliance and documentation.
-        We also bring audit exposure from <strong>EY Argentina</strong> (engagements with <strong>Fiat</strong> and <strong>Nissan</strong>), and
-        management control / performance reporting for <strong>Renault</strong>.
-      </p>
-      <div class="clients-row">
-        <span class="client-tag">Birge &amp; Held (U.S.)</span>
-        <span class="client-tag">Cornerstone (U.S.)</span>
-        <span class="client-tag">Drinks2Go (U.S.)</span>
-        <span class="client-tag">PwC Argentina — Tax Senior</span>
-        <span class="client-tag">EY Argentina — Audit</span>
-        <span class="client-tag">Fiat</span>
-        <span class="client-tag">Nissan</span>
-        <span class="client-tag">Renault — Mgmt Control</span>
-      </div>
-    </div>
-    <div>
-      <h3 style="margin-top:0;">What this means for U.S. companies</h3>
-      <ul class="list-check">
-        <li>We understand what CPAs and controllers need to see in the workpapers.</li>
-        <li>We know how to document for tax purposes (because of PwC background).</li>
-        <li>We are used to audit-level quality (EY, automotive multinationals).</li>
-        <li>We can report in English and follow U.S. cut-off dates.</li>
-        <li>We can expand the scope to engineering / architecture / programming if you centralize services with one vendor.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+2 hrs
+maximum time difference with U.S. Eastern — real-time collaboration, not overnight hand-offs
 
-<section id="services">
-  <h2 class="section-title">Core consulting & outsourcing services</h2>
-  <p class="section-sub">We can act as your external accounting team or support your internal finance/tax department.</p>
-  <div class="grid-3">
-    <div class="card">
-      <small>Accounting & AP</small>
-      <h3>Accounts Payable operations</h3>
-      <p>Invoice intake, vendor statements, 3-way match, payment run prep, documentation in your system (RealPage, Yardi, QuickBooks or SAP).</p>
-    </div>
-    <div class="card">
-      <small>Finance</small>
-      <h3>Bank reconciliations & GL</h3>
-      <p>Monthly bank recs, GL review, balance sheet audit files, variance explanations — ideal for real estate and service companies.</p>
-    </div>
-    <div class="card">
-      <small>Reporting</small>
-      <h3>Month-end & management reporting</h3>
-      <p>Property/entity reporting, KPIs, support for U.S. controllers, Smartsheet / SharePoint trackers.</p>
-    </div>
-    <div class="card">
-      <small>Tax support</small>
-      <h3>Tax data & compliance</h3>
-      <p>Experience as Tax Senior (PwC Argentina). We prepare organized folders and schedules so your CPA can file faster.</p>
-    </div>
-    <div class="card">
-      <small>Management control</small>
-      <h3>Budget vs actual / performance</h3>
-      <p>Automotive-style cost tracking, dashboards, and management control based on the experience with Renault.</p>
-    </div>
-    <div class="card">
-      <small>Process & automation</small>
-      <h3>Programming & flows</h3>
-      <p>Python, Excel, SharePoint and Power Automate workflows to reduce manual steps in AP, reconciliations and reporting.</p>
-    </div>
-  </div>
-</section>
+2
+working languages — English and Spanish — for U.S. and Latin American operations
 
-<section id="technology">
-  <h2 class="section-title">Technology & platforms we work with</h2>
-  <p class="section-sub">We adapt to the software stack you already use — especially common U.S. property/accounting systems.</p>
-  <div class="tech-stack">
-    <div class="tech-item">RealPage (Financial Suite / AP / Bank)</div>
-    <div class="tech-item">Yardi</div>
-    <div class="tech-item">QuickBooks Online / Desktop</div>
-    <div class="tech-item">SAP</div>
-    <div class="tech-item">Microsoft 365 / SharePoint</div>
-    <div class="tech-item">Smartsheet</div>
-    <div class="tech-item">Excel advanced (macros, formulas)</div>
-    <div class="tech-item">Power Automate / flows</div>
-  </div>
-  <p style="margin-top:14px; font-size:.78rem; color:var(--muted);">
-    We can work with your existing folder structure (SharePoint, Teams, GDrive) and follow your approval workflows. If you are migrating from Excel-based accounting to RealPage or Yardi, we can help stabilize the process.
-  </p>
-</section>
+100%
+remote-ready delivery inside your own systems, with documented, auditable processes
 
-<section id="approach">
-  <h2 class="section-title">How we work</h2>
-  <p class="section-sub">Clear stages, documented delivery and communication adapted to U.S. teams.</p>
-  <div class="process-grid">
-    <div class="process-step">
-      <small>Stage 1</small>
-      <h3>30-min discovery</h3>
-      <p>We map your entities, systems (RealPage, Yardi, QuickBooks, SAP), volume and deadlines.</p>
-    </div>
-    <div class="process-step">
-      <small>Stage 2</small>
-      <h3>Scope & pricing</h3>
-      <p>We send a concise scope with the services, frequency and a fixed monthly fee or hourly model.</p>
-    </div>
-    <div class="process-step">
-      <small>Stage 3</small>
-      <h3>Onboarding & access</h3>
-      <p>We set up users, shared folders, SOPs and escalation channels (email, Teams, WhatsApp).</p>
-    </div>
-    <div class="process-step">
-      <small>Stage 4</small>
-      <h3>Recurring delivery</h3>
-      <p>Same calendar every month: recs, AP and reports arrive on the agreed dates.</p>
-    </div>
-  </div>
-</section>
+See it in action
+Hours of work.
+Done in seconds.
+This is how we approach a bank reconciliation: automation matches every transaction against the ledger, and our accountants focus only on the exceptions. Press run and watch.
 
-<section>
-  <h2 class="section-title">Engagement models</h2>
-  <p class="section-sub">Choose the model that fits how your team operates.</p>
-  <div class="grid-3">
-    <div class="card">
-      <h3>Fixed monthly retainer</h3>
-      <p>We define a clear scope (AP + recs + reporting) and deliver every month. Best for real estate and recurring work.</p>
-    </div>
-    <div class="card">
-      <h3>Dedicated nearshore team</h3>
-      <p>You get a named resource (or 2) working only on your entities, with a backup person from our team.</p>
-    </div>
-    <div class="card">
-      <h3>Project-based</h3>
-      <p>For specific tasks: cleanup, backlog of reconciliations, audit/tax preparation, process automation.</p>
-    </div>
-  </div>
-</section>
+8
+Auto-matched
+2
+Flagged for review
+2.7s
+Processing time
+Simulated demo with sample data. Real engagements run inside your systems, with your approval controls.
 
-<section id="contact">
-  <h2 class="section-title">Let’s talk about your accounting & finance needs</h2>
-  <p class="section-sub">Tell us what you need to delegate and we’ll let you know in 24–48 hours how we can support you.</p>
-  <div class="contact">
-    <form>
-      <label for="name">Full name</label>
-      <input id="name" name="name" type="text" placeholder="Your name" />
-      <label for="company">Company</label>
-      <input id="company" name="company" type="text" placeholder="Your company" />
-      <label for="email">Corporate email</label>
-      <input id="email" name="email" type="email" placeholder="you@company.com" />
-      <label for="service">Service you need</label>
-      <select id="service" name="service">
-        <option>Accounts Payable / AP</option>
-        <option>Bank Reconciliations</option>
-        <option>Month-end reporting</option>
-        <option>Tax / audit workpapers</option>
-        <option>Management control</option>
-        <option>Process automation</option>
-        <option>Other / Not sure</option>
-      </select>
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Describe your entities, systems and deadlines..."></textarea>
-      <button type="submit">Send message</button>
-    </form>
-    <div>
-      <h3>Direct contact</h3>
-      <p>Email: <a href="mailto:contact@latamservices.us">contact@latamservices.us</a></p>
-      <p>Location: Argentina (nearshore to U.S.)</p>
-      <p>Current U.S. clients: Birge &amp; Held, Cornerstone, Drinks2Go.</p>
-      <p>Corporate background: PwC Argentina (Tax Senior), EY (Fiat &amp; Nissan), Renault (management control).</p>
-      <p style="font-size:.75rem; color:var(--muted); margin-top:10px;">We can sign NDAs and work inside your Microsoft 365 / SharePoint / Teams setup.</p>
-    </div>
-  </div>
-</section>
+bank_rec_october.py
+Date	Description	Bank	Ledger	Status
+10/01	ACH — Rent deposits	$48,250.00	$48,250.00	Matched
+10/02	Vendor — Apex Plumbing	-$1,840.00	-$1,840.00	Matched
+10/03	Utility — City Water	-$3,215.40	-$3,215.40	Matched
+10/06	Vendor — BrightLine HVAC	-$2,760.00	-$2,670.00	Diff $90.00
+10/07	Bank service fee	-$35.00	—	Not in ledger
+10/09	ACH — Rent deposits	$22,310.00	$22,310.00	Matched
+10/10	Insurance premium	-$4,120.00	-$4,120.00	Matched
+10/14	Vendor — GreenCare Landscaping	-$1,450.00	-$1,450.00	Matched
+10/15	Payroll transfer	-$18,900.00	-$18,900.00	Matched
+10/16	Electric — Metro Power	-$2,987.65	-$2,987.65	Matched
+▶ Run again
+Reset
+Capabilities
+Expertise that
+creates momentum.
+Integrated services across the functions that keep your business running — delivered as projects or as an ongoing extension of your team.
 
-</main>
+$16k
+$11k
 
-<footer>
-  © <span id="year"></span> Latam Services. Consulting & Nearshore Accounting for U.S. Companies.
-</footer>
+03Financial Advisory
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+04Tax & Compliance
 
-</body>
-</html>
+05Managed Business Support
+01 / Finance
+Accounting & financial operations
+Dependable, close-ready accounting delivered by certified public accountants. We take ownership of the daily, weekly and monthly cycle so your team can focus on decisions.
+
+Accounts payable: invoice intake, verification, GL coding and approval routing
+Accounts receivable, collections tracking and cash application
+Bank and credit card reconciliations
+Month-end close support and journal entries
+Property management accounting (RealPage, Yardi)
+Management and financial reporting packages
+Outcome: a faster, cleaner close with fewer errors and a clear audit trail.
+Savings calculator
+What could your
+team get back?
+Move the sliders to model your own numbers. Every assumption is visible and editable — no sign-up needed to see results.
+
+Hours per month on accounting & back-office tasks
+800 h
+
+Fully loaded in-house cost per hour
+$20
+
+Share of tasks that can be automated
+10%
+
+Assumed nearshore rate per hour
+$15
+
+Illustrative estimate only — not a quote. Your proposal is based on a review of your real scope and volumes.
+
+Estimated annual savings
+$62,400
+80
+Hours freed per month
+33%
+Lower monthly cost
+Monthly cost
+Today
+With us
+Cumulative cost · 12 months
+$0
+$96k
+$192k
+0
+6 mo
+12 mo
+Today
+With LATAM SERVICES
+Savings
+Get a detailed proposal
+↗
+Industries
+Deep where it counts.
+Our experience is rooted in the operational realities of these sectors — their systems, their cycles and their pressure points.
+
+Core
+Real estate & property management
+Multifamily and commercial portfolios: vendor invoices, property-level GL, bank recs and owner reporting in RealPage and Yardi.
+
+Startups & scale-ups
+Finance foundations that grow with you: clean books, scalable processes and reporting investors understand.
+
+Professional services
+Firms that need reliable back-office execution and better visibility into margins, billing and cash.
+
+Cross-border businesses
+U.S. companies operating in Latin America and LATAM companies entering the U.S. — bilingual, bi-cultural support.
+
+The nearshore advantage
+Your hours.
+Our expertise.
+Offshore models often trade quality for cost. Ours doesn't. A professional team in Argentina gives you overlapping working hours, cultural alignment with U.S. business and certified accounting talent.
+
+Traditional offshore
+LATAM SERVICES
+Time-zone overlap with U.S.
+Little to none
+✓Full business day
+Accounting credentials
+Varies
+✓Certified public accountants
+Automation built in
+Rarely
+✓Python & AI by default
+Communication
+Ticket-based
+✓Direct, real-time, bilingual
+U.S. contracting
+Foreign entity
+✓U.S.-registered company
+Working on your clock
+Same day.
+Same hours.
+A live view of our team's working day against U.S. time zones. When you're at your desk, so are we.
+
+New York
+6:24 PM
+After hours
+Chicago
+5:24 PM
+After hours
+Los Angeles
+3:24 PM
+Business hours
+Our team · Córdoba
+7:24 PM
+Team offline — back at 9 AM
+Working hours shown in U.S. Eastern Time
+Now: 6 PM ET
+New York
+9 AM – 5 PM local
+Chicago
+9 AM – 5 PM local
+Los Angeles
+9 AM – 5 PM local
+Our team
+9 AM – 6 PM local
+6 AM
+10 AM
+2 PM
+6 PM
+10 PM
+New York: 8 h shared
+Chicago: 7 h shared
+Los Angeles: 5 h shared
+Free finance health check
+How healthy is your
+finance function?
+Five quick questions. An instant score and tailored recommendations — no sign-up required.
+
+Takes about one minute
+Question 1 of 5
+0%
+How long does your month-end close take?
+More than 15 days
+8 to 15 days
+Under 8 days
+Our approach
+From first call
+to lasting impact.
+A structured, transparent method — so you always know what we're doing, why, and what comes next.
+
+01
+Discover
+We learn your business, systems and pain points, and map current workflows end to end.
+
+02
+Design
+We propose scope, controls and automation opportunities, with clear deliverables and timelines.
+
+03
+Deliver
+We onboard into your systems, document every process and run the work with agreed SLAs.
+
+04
+Improve
+We measure, report and continuously automate — so the engagement gets more efficient over time.
+
+Engagement models
+Work with us
+your way.
+Start small, prove value, then scale. Every engagement begins with a no-cost discovery call.
+
+Project-based
+Defined projects
+Fixed scope and timeline for a specific outcome.
+
+Clean-ups and catch-up bookkeeping
+Automation builds
+Process and controls reviews
+Discuss a project
+→
+Most popular
+Managed services
+We own a function end to end, with SLAs and reporting.
+
+AP, AR and reconciliations
+Monthly close support
+Continuous automation
+Get a proposal
+→
+Team extension
+Dedicated specialists
+Professionals embedded in your team and tools.
+
+Full-time or part-time capacity
+Your processes, your systems
+Flexible scaling
+Build your team
+→
+Who we are
+Global perspective.
+Personal commitment.
+Rigor
+Accounting standards and controls in every deliverable.
+Transparency
+Clear scope, clear reporting, no surprises.
+Innovation
+Automation and AI applied where they truly help.
+Partnership
+We succeed when your team does.
+LATAM SERVICES is a U.S.-registered consulting company with a professional team based in Argentina, supporting businesses with accounting, finance, tax and operational solutions.
+
+Our team is led by certified public accountants with experience across corporate finance, tax and U.S. business operations — including day-to-day accounting for U.S. property management companies.
+
+What sets us apart is how we work: every process we take on is documented, controlled and, wherever possible, automated. Our clients don't just get the work done — they get a better way of doing it.
+
+FAQ
+Questions,
+answered.
+Don't see yours? Ask us directly.
+
+Do you work inside our existing systems?
+Yes. We work in the platforms you already use — RealPage, Yardi, QuickBooks, SAP, Microsoft 365 and others — following your approval flows and access policies.
+
+How do you handle data security and confidentiality?
+What hours does your team work?
+How do we contract with you?
+How quickly can we get started?
+Let's build what's next
+Better operations.
+Stronger business.
+Tell us a little about your business and what you'd like to improve. We'll come back within one business day to schedule a discovery call.
+
+✉
+contact@latamservices.us
+◷
+Mon–Fri · U.S. business hours
+◎
+U.S.-registered · Team in Argentina
+Name
+Company
+Work email
+Interested in
+
+Accounting & finance ops
+How can we help?
+
+Send message
+↗
+L
+LATAM SERVICES
+International finance, operations and automation consulting for U.S. and Latin American businesses.
+
+Capabilities
+Accounting & finance ops
+Automation & AI
+Financial advisory
+Tax & compliance
+Company
+About us
+Our approach
+Engagement models
+FAQ
+Contact
+contact@latamservices.us
+Book a discovery call
+© 2026 LATAM SERVICES. All rights reserved.
+Finance · Operations · Automation
+↑
