@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LATAM SERVICES — International Finance, Operations & Automation Consulting</title>
+<meta name="description" content="LATAM SERVICES is a U.S.-registered consulting firm with a nearshore team in Argentina. We deliver accounting, financial operations, advisory and automation for U.S. and international businesses.">
+<meta name="theme-color" content="#080b17">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:title" content="LATAM SERVICES — Finance. Operations. Forward.">
+<meta property="og:description" content="Nearshore finance, operations and automation consulting for U.S. and international businesses.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080b17;--bg2:#0d1020;--fg:#f6f7fc;--muted:#a6afc6;--line:#ffffff1c;--violet:#9e7bff;--violet2:#bba6ff;--cyan:#6fe9ed;--panel:#11162a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit;color:inherit}
+.container{width:min(1200px,calc(100% - 48px));margin:auto}
+::selection{background:#9e7bff55}
+
+/* progress + cursor glow */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--violet),var(--cyan));z-index:100}
+.glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#8e64fc16,transparent 65%);transform:translate(-50%,-50%);z-index:0;transition:opacity .4s}
+
+/* nav */
+header.site{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
+header.site.scrolled{background:#080b17cc;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:var(--line)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.12em;font-size:14px}
+.logo-mark{height:34px;width:34px;border:1px solid #bda7ff70;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,#8e64fc40,#5ce6e820);font-size:15px;letter-spacing:0}
+.logo-mark img{width:100%;height:100%;object-fit:cover;border-radius:9px;display:block}
+.links{display:flex;align-items:center;gap:28px;color:#cbd0df;font-size:13px}
+.links a{position:relative}.links a:not(.nav-cta):after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--cyan);transition:width .3s}.links a:not(.nav-cta):hover:after{width:100%}
+.links a:hover{color:#fff}
+.nav-cta{padding:11px 18px;border:1px solid #ffffff55;border-radius:999px;font-size:12px;font-weight:700;transition:background .25s,color .25s}
+.nav-cta:hover{background:#e9e2ff;color:#161127}
+.burger{display:none;background:none;border:1px solid #ffffff40;border-radius:10px;width:42px;height:42px;cursor:pointer;position:relative}
+.burger span,.burger:before,.burger:after{content:"";position:absolute;left:11px;right:11px;height:1.5px;background:#fff;transition:transform .3s,opacity .3s}
+.burger:before{top:14px}.burger span{top:20px}.burger:after{top:26px}
+.menu-open .burger:before{transform:translateY(6px) rotate(45deg)}.menu-open .burger span{opacity:0}.menu-open .burger:after{transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{display:none}
+
+/* hero */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;isolation:isolate;padding:110px 0 40px}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 72% 43%,#33236470,transparent 50%),radial-gradient(ellipse at 15% 90%,#0d607c30,transparent 48%);z-index:-2}
+.grid-bg{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 70%)}
+.hero-layout{display:grid;grid-template-columns:1.08fr .92fr;gap:20px;align-items:center}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan);font-weight:700;display:flex;gap:12px;align-items:center}
+.eyebrow:before{content:"";width:24px;height:1px;background:var(--cyan)}
+h1{font-size:clamp(46px,6.2vw,88px);letter-spacing:-.065em;line-height:1.03;margin:24px 0;font-weight:650}
+.grad{background:linear-gradient(95deg,#c9a8ff,#72e8ee);background-clip:text;-webkit-background-clip:text;color:transparent}
+.rotator{display:inline-block;position:relative;min-width:6ch}
+.rotator span{display:inline-block;transition:opacity .45s,transform .45s}
+.rotator span.out{opacity:0;transform:translateY(-.35em)}
+.rotator span.in{opacity:0;transform:translateY(.35em)}
+.lead{color:#b3bdd0;line-height:1.8;font-size:18px;max-width:540px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.button{display:inline-flex;gap:14px;align-items:center;padding:16px 22px;border-radius:999px;font-size:13px;font-weight:700;transition:transform .25s,background .25s,box-shadow .25s;cursor:pointer;border:0}
+.button:hover{transform:translateY(-3px)}
+.button-primary{background:#e9e2ff;color:#161127;box-shadow:0 10px 40px #9e7bff30}
+.button-primary:hover{box-shadow:0 14px 50px #9e7bff55}
+.button-outline{border:1px solid #ffffff45;color:#fff;background:transparent}
+.button span{font-size:18px}
+.hero-meta{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap;color:#8d97b0;font-size:12px;letter-spacing:.06em}
+.hero-meta b{display:block;color:#fff;font-size:15px;letter-spacing:0;font-weight:600;margin-bottom:4px}
+.visual{position:relative;height:560px;display:grid;place-items:center;perspective:950px}
+.orb{height:min(450px,90%);aspect-ratio:1;position:relative;transform-style:preserve-3d;animation:float 7s ease-in-out infinite;filter:drop-shadow(0 35px 80px #8959ff3c);transition:transform .2s}
+.orb-core{position:absolute;inset:21%;border-radius:50%;background:radial-gradient(circle at 30% 25%,#b6ffff,#8166ed 35%,#3c2b7a 68%,#101630 85%);box-shadow:inset -25px -24px 45px #090d2cbb,0 0 85px #8166ed65}
+.ring{position:absolute;inset:8%;border:1.5px solid #b9a2ff8a;border-radius:50%;box-shadow:0 0 25px #8d74ef44;transform-style:preserve-3d}
+.ring.one{transform:rotateX(68deg) rotateZ(18deg);animation:spin1 18s linear infinite}
+.ring.two{inset:2%;border-color:#70e9ee8c;transform:rotateY(69deg) rotateZ(32deg);animation:spin2 23s linear infinite}
+.ring.three{inset:15%;border-color:#ffffff55;transform:rotateX(25deg) rotateY(55deg);animation:spin1 25s linear infinite reverse}
+.orb-dot{position:absolute;width:9px;height:9px;border-radius:50%;background:#b7ffff;top:15%;left:23%;box-shadow:0 0 25px #72f9ff}
+.orbit-label{position:absolute;background:#13172bc9;backdrop-filter:blur(16px);border:1px solid #ffffff26;border-radius:12px;padding:13px 16px;font-size:11px;letter-spacing:.09em;color:#e6e4ff;box-shadow:0 20px 45px #05061455;animation:bob 6s ease-in-out infinite}
+.orbit-label i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--cyan);margin-right:8px;box-shadow:0 0 10px var(--cyan)}
+.orbit-label.a{top:16%;right:0}.orbit-label.b{bottom:22%;left:-4%;animation-delay:-2s}.orbit-label.c{bottom:6%;right:8%;animation-delay:-4s}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;position:relative}
+.marquee:before,.marquee:after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2}
+.marquee:before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}.marquee:after{right:0;background:linear-gradient(270deg,var(--bg),transparent)}
+.track{display:flex;gap:56px;width:max-content;animation:marquee 38s linear infinite}
+.track span{font-size:15px;font-weight:600;color:#7c87a3;white-space:nowrap;letter-spacing:-.01em;display:flex;align-items:center;gap:56px}
+.track span:after{content:"✦";color:#9e7bff66;font-size:11px}
+
+/* sections */
+section{padding:120px 0;position:relative}
+.section-tag{font-size:11px;letter-spacing:.2em;color:#a98cff;text-transform:uppercase;font-weight:700}
+.section-title{font-size:clamp(36px,4.8vw,62px);line-height:1.1;letter-spacing:-.055em;font-weight:620;margin:18px 0}
+.section-copy{font-size:17px;line-height:1.85;color:var(--muted);max-width:640px}
+.accent{color:var(--violet2)}
+.head-row{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px}
+.head-row .section-copy{max-width:400px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#ffffff04}
+.stat{padding:36px 30px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .num{font-size:clamp(40px,4.4vw,58px);font-weight:600;letter-spacing:-.06em;line-height:1}
+.stat p{color:var(--muted);font-size:13px;line-height:1.6;margin:14px 0 0}
+
+/* capabilities tabs */
+.caps{background:linear-gradient(180deg,var(--bg2),#0b0e1b)}
+.tabs{display:grid;grid-template-columns:320px 1fr;gap:30px}
+.tab-list{display:flex;flex-direction:column;gap:6px}
+.tab-btn{text-align:left;background:transparent;border:1px solid transparent;border-radius:14px;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:#aeb7c9;font-size:15px;font-weight:600;transition:all .25s}
+.tab-btn small{font-size:11px;color:#6f7a96;letter-spacing:.14em;font-weight:500;margin-right:14px}
+.tab-btn:hover{color:#fff;background:#ffffff06}
+.tab-btn[aria-selected=true]{color:#fff;border-color:#b69aff60;background:linear-gradient(135deg,#292448,#12182b)}
+.tab-btn[aria-selected=true]:after{content:"→";color:var(--cyan)}
+.tab-panel{border:1px solid #ffffff1b;border-radius:24px;padding:44px;background:linear-gradient(135deg,#1b1d37aa,#111527);min-height:430px;position:relative;overflow:hidden}
+.tab-panel:before{content:"";position:absolute;width:340px;height:340px;right:-120px;top:-120px;background:radial-gradient(circle,#7451ca50,transparent 65%)}
+.tab-panel[hidden]{display:none}
+.tab-panel.active{animation:fadeUp .5s ease}
+.tab-panel h3{font-size:32px;letter-spacing:-.04em;margin:10px 0 14px;font-weight:620}
+.tab-panel>p{color:#b4bed0;line-height:1.8;max-width:620px;font-size:15px}
+.cap-items{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:28px;position:relative}
+.cap-items div{border:1px solid #ffffff17;border-radius:14px;padding:16px 18px;background:#ffffff05;font-size:14px;color:#e2e5f0;display:flex;gap:12px;align-items:flex-start;line-height:1.5;transition:border-color .2s,transform .2s}
+.cap-items div:hover{border-color:#91e7f080;transform:translateX(4px)}
+.cap-items div:before{content:"";flex:none;margin-top:7px;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.outcome{margin-top:24px;padding:16px 20px;border-left:2px solid var(--violet);background:#9e7bff10;border-radius:0 12px 12px 0;font-size:14px;color:#d9d3ff;position:relative}
+
+/* industries */
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ind{position:relative;border:1px solid #ffffff1b;border-radius:20px;padding:30px 26px 28px;min-height:300px;background:#ffffff05;overflow:hidden;transition:transform .35s,border-color .35s}
+.ind:hover{transform:translateY(-8px);border-color:#b69aff80}
+.ind .icon{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#8e64fc40,#5ce6e820);border:1px solid #bda7ff50;margin-bottom:60px}
+.ind .icon svg{width:22px;height:22px;stroke:#e3d3ff;fill:none;stroke-width:1.6}
+.ind h3{font-size:20px;letter-spacing:-.03em;margin:0 0 10px}
+.ind p{color:#aeb7c9;font-size:13.5px;line-height:1.7;margin:0}
+.ind .tag{position:absolute;top:30px;right:24px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);border:1px solid #6fe9ed40;padding:5px 9px;border-radius:999px}
+.ind:after{content:"";position:absolute;inset:auto -40% -60% auto;width:260px;height:260px;background:radial-gradient(circle,#6fe9ed22,transparent 65%);opacity:0;transition:opacity .4s}
+.ind:hover:after{opacity:1}
+
+/* why nearshore */
+.why{background:radial-gradient(ellipse at 80% 20%,#6b4caa2c,transparent 55%),#101326}
+.why-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.compare{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#0b0e1d}
+.compare-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;border-bottom:1px solid var(--line);font-size:13.5px}
+.compare-row:last-child{border-bottom:0}
+.compare-row>div{padding:17px 20px;color:#aeb7c9}
+.compare-row>div:first-child{color:#e6e8f2;font-weight:500}
+.compare-row>div:last-child{color:#fff;background:#9e7bff12}
+.compare-row.h>div{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7c87a3;font-weight:600}
+.compare-row.h>div:last-child{color:var(--cyan)}
+.ok{color:var(--cyan);margin-right:6px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;margin-top:30px}
+.steps-line{position:absolute;top:27px;left:28px;right:28px;height:1px;background:var(--line)}
+.steps-line i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--violet),var(--cyan));transition:width 1.8s cubic-bezier(.2,.7,.2,1)}
+.steps.visible .steps-line i{width:100%}
+.step{position:relative}
+.step .dot{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--bg);border:1px solid #bda7ff60;font-size:14px;font-weight:600;color:var(--violet2);position:relative;z-index:1;margin-bottom:26px}
+.step h3{font-size:20px;letter-spacing:-.03em;margin:0 0 10px}
+.step p{color:#aeb7c9;font-size:14px;line-height:1.75;margin:0;max-width:260px}
+
+/* engagement models */
+.models{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.model{border:1px solid #ffffff1b;border-radius:22px;padding:34px 30px;background:linear-gradient(160deg,#171a32,#0e1222);transition:transform .3s,border-color .3s;display:flex;flex-direction:column}
+.model:hover{transform:translateY(-6px);border-color:#91e7f080}
+.model.featured{border-color:#b69aff70;background:linear-gradient(160deg,#2a2350,#111629);box-shadow:0 30px 70px #6b4caa25}
+.model .label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a48ce5}
+.model h3{font-size:25px;letter-spacing:-.04em;margin:16px 0 10px}
+.model>p{color:#aeb7c9;font-size:14px;line-height:1.75;margin:0 0 22px}
+.model ul{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:11px;font-size:13.5px;color:#dfe2ee}
+.model li:before{content:"✓";color:var(--cyan);margin-right:10px}
+.model .button{margin-top:auto;justify-content:space-between}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.about-details{border-left:1px solid #ffffff29;padding-left:40px}
+.about-details p{font-size:15.5px;line-height:1.9;color:#b4bed0;margin:0 0 20px}
+.values{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}
+.values div{border:1px solid var(--line);border-radius:14px;padding:18px;font-size:13px;color:#aeb7c9;line-height:1.6}
+.values b{display:block;color:#fff;font-size:15px;margin-bottom:5px;font-weight:600}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-size:17px;font-weight:550;letter-spacing:-.02em;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--violet2);font-weight:300;transition:transform .3s}
+.faq details[open] summary:after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{margin:0 0 22px;color:var(--muted);line-height:1.8;font-size:15px;max-width:640px;animation:fadeUp .35s ease}
+
+/* contact */
+.contact{border-radius:28px;padding:64px;background:radial-gradient(ellipse at 10% 110%,#7456d960,transparent 60%),linear-gradient(135deg,#21183c,#12182c);border:1px solid #a98aff3c;display:grid;grid-template-columns:.9fr 1.1fr;gap:60px}
+.contact h2{font-size:clamp(36px,4.5vw,58px);line-height:1.08;letter-spacing:-.055em;margin:16px 0}
+.contact .info{color:#c3c3d9;line-height:1.8;font-size:15px}
+.contact-list{margin-top:30px;display:grid;gap:14px;font-size:14px}
+.contact-list a,.contact-list div{display:flex;gap:12px;align-items:center;color:#e6e8f2}
+.contact-list span{width:34px;height:34px;border-radius:10px;border:1px solid #ffffff30;display:grid;place-items:center;font-size:14px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a6afc6}
+.field input,.field select,.field textarea{background:#0b0e1dcc;border:1px solid #ffffff24;border-radius:12px;padding:14px 15px;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}
+.field select option{background:#11162a}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--violet);box-shadow:0 0 0 3px #9e7bff25}
+.form-note{grid-column:1/-1;font-size:12px;color:#8d97b0;margin:0}
+.form-status{grid-column:1/-1;font-size:13px;color:var(--cyan);min-height:18px;margin:0}
+
+/* footer */
+.footer{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding:70px 0 40px;font-size:13px;color:#909ab0}
+.footer h4{color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 18px;font-weight:600}
+.footer ul{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+.footer a:hover{color:#fff}
+.footer p{line-height:1.8;max-width:300px}
+.legal{border-top:1px solid var(--line);padding:24px 0 40px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#6f7a96}
+.to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:#e9e2ff;color:#161127;display:grid;place-items:center;font-weight:700;opacity:0;transform:translateY(20px);transition:all .3s;z-index:40;box-shadow:0 10px 30px #00000060}
+.to-top.show{opacity:1;transform:none}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+
+@keyframes float{0%,100%{transform:translateY(0) rotate(-7deg)}50%{transform:translateY(-18px) rotate(3deg)}}
+@keyframes spin1{to{transform:rotateX(428deg) rotateZ(378deg)}}
+@keyframes spin2{to{transform:rotateY(429deg) rotateZ(392deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+@media(max-width:1000px){.ind-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.tabs{grid-template-columns:1fr}.tab-list{flex-direction:row;overflow-x:auto;padding-bottom:6px}.tab-btn{white-space:nowrap;flex:none}.tab-btn[aria-selected=true]:after{content:""}.footer{grid-template-columns:1fr 1fr}}
+@media(max-width:850px){
+.links{display:none}.burger{display:block}
+.mobile-menu{display:flex;flex-direction:column;gap:6px;position:fixed;inset:78px 0 auto;background:#080b17f5;backdrop-filter:blur(18px);padding:18px 24px 28px;border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;pointer-events:none;transition:all .3s;z-index:49}
+.mobile-menu a{padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.menu-open .mobile-menu{opacity:1;transform:none;pointer-events:auto}
+.hero{min-height:auto;padding:120px 0 40px}
+.hero-layout,.why-grid,.about-grid,.faq-grid,.contact{grid-template-columns:1fr;gap:40px}
+.visual{height:380px}.orb{height:330px}
+.head-row{display:block}
+.steps{grid-template-columns:1fr 1fr;gap:40px}.steps-line{display:none}
+.models{grid-template-columns:1fr}
+.about-details{padding-left:22px}
+.contact{padding:40px 28px}
+section{padding:84px 0}}
+@media(max-width:550px){
+.container{width:calc(100% - 32px)}
+.nav{height:70px}.mobile-menu{top:70px}
+h1{font-size:46px}
+.visual{height:320px}.orb{height:270px}.orbit-label{font-size:9px;padding:9px 11px}.orbit-label.c{display:none}
+.ind-grid,.cap-items,.steps,.values,form{grid-template-columns:1fr}
+.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}
+.tab-panel{padding:28px 22px}
+.compare-row{grid-template-columns:1fr 1fr 1fr;font-size:12px}.compare-row>div{padding:13px 10px}
+.footer{grid-template-columns:1fr}.legal{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.orb,.ring,.orbit-label,.track{animation:none}.reveal{opacity:1;transform:none;transition:none}.glow{display:none}}
+</style>
+<style>
+/* ===== v2: interactive tools ===== */
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes rot{to{--a:360deg}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 #4ade8090}70%{box-shadow:0 0 0 10px #4ade8000}100%{box-shadow:0 0 0 0 #4ade8000}}
+.gborder{border-radius:24px;background:linear-gradient(#0e1226,#0e1226) padding-box,conic-gradient(from var(--a),#9e7bff,#6fe9ed,#ffffff12,#ffffff12,#9e7bff) border-box;border:1px solid transparent;animation:rot 7s linear infinite}
+.chip{display:inline-flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:7px 13px;border-radius:999px;border:1px solid #6fe9ed40;color:var(--cyan);background:#6fe9ed0d}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 1.8s infinite}
+.live-dot.off{background:#7c87a3;animation:none}
+.small-btn{padding:11px 16px;font-size:12px}
+.note{font-size:11.5px;color:#6f7a96;margin-top:16px;line-height:1.6}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:16px;background:#ffffff05}
+.kpi b{display:block;font-size:26px;font-weight:600;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.kpi span{font-size:11px;color:#8d97b0;letter-spacing:.04em}
+
+/* demo */
+.demo-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}
+.win{overflow:hidden;box-shadow:0 40px 90px #00000080}
+.win-bar{display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid var(--line);font-size:12px;color:#8d97b0}
+.win-bar i{width:10px;height:10px;border-radius:50%;background:#ff6b6b99}.win-bar i:nth-child(2){background:#fbbf2499}.win-bar i:nth-child(3){background:#4ade8099}
+.win-bar span{margin-left:auto;font-family:ui-monospace,Menlo,monospace;font-size:11px}
+.rec-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.rec-table th{text-align:left;font-weight:500;color:#7c87a3;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:12px 14px;border-bottom:1px solid var(--line)}
+.rec-table td{padding:10px 14px;border-bottom:1px solid #ffffff0d;color:#d7dbe8;transition:background .3s;white-space:nowrap}
+.rec-table .num{text-align:right;font-variant-numeric:tabular-nums}
+.rec-table tr.scan td{background:#9e7bff22}
+.st{display:inline-block;font-size:10.5px;padding:4px 9px;border-radius:999px;border:1px solid #ffffff20;color:#7c87a3}
+.st.good{color:#4ade80;border-color:#4ade8050;background:#4ade8012;animation:fadeUp .3s}
+.st.warn{color:#fbbf24;border-color:#fbbf2450;background:#fbbf2412;animation:fadeUp .3s}
+.win-foot{display:flex;gap:10px;align-items:center;padding:16px;border-top:1px solid var(--line);flex-wrap:wrap}
+.pbar{flex:1;min-width:110px;height:6px;border-radius:9px;background:#ffffff12;overflow:hidden}
+.pbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--violet),var(--cyan));transition:width .25s}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:1fr 1.15fr;overflow:hidden}
+.calc-in{padding:40px;border-right:1px solid var(--line)}
+.calc-out{padding:40px;background:radial-gradient(ellipse at 100% 0,#7451ca35,transparent 60%)}
+.rng{margin-bottom:28px}
+.rng-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:13px;color:#c9cfe0;margin-bottom:12px}
+.rng-top output{font-size:20px;font-weight:600;color:#fff;letter-spacing:-.02em;white-space:nowrap}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:9px;background:linear-gradient(90deg,var(--violet) var(--p,50%),#ffffff18 var(--p,50%));outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:5px solid var(--violet);box-shadow:0 0 0 6px #9e7bff25;transition:transform .15s}
+input[type=range]:active::-webkit-slider-thumb{transform:scale(1.15)}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:5px solid var(--violet)}
+input[type=range]:focus-visible{box-shadow:0 0 0 3px #6fe9ed55}
+.big{font-size:clamp(46px,5.4vw,70px);font-weight:650;letter-spacing:-.06em;line-height:1.05;margin:16px 0 4px;font-variant-numeric:tabular-nums}
+.out-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}
+.charts{display:grid;grid-template-columns:.75fr 1.25fr;gap:12px}
+.chart-card{border:1px solid var(--line);border-radius:16px;padding:16px;background:#0b0e1d99}
+.chart-card h4{margin:0 0 8px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8d97b0;font-weight:600}
+.chart-card svg{width:100%;height:auto;display:block;overflow:visible}
+.chart-card text{font-family:Inter,sans-serif}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:#aeb7c9;margin-top:6px}
+.legend i{display:inline-block;width:12px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.bar{transform-box:fill-box;transform-origin:bottom;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.calc:not(.visible) .bar{transform:scaleY(0)!important}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s ease}
+.calc.visible .draw{stroke-dashoffset:0}
+
+/* health check */
+.hc{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.quiz{padding:36px;min-height:440px;display:flex;flex-direction:column}
+.q-top{display:flex;justify-content:space-between;font-size:12px;color:#8d97b0;margin-bottom:12px;letter-spacing:.06em}
+.q-prog{height:4px;background:#ffffff12;border-radius:9px;overflow:hidden;margin-bottom:30px}
+.q-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--cyan));transition:width .4s}
+.q-body{animation:fadeUp .4s ease}
+.q-body h3{font-size:24px;letter-spacing:-.03em;margin:0 0 22px;font-weight:600;line-height:1.3}
+.opt{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;padding:16px 18px;margin-bottom:10px;border-radius:14px;border:1px solid #ffffff1f;background:#ffffff05;cursor:pointer;font-size:14.5px;transition:all .2s}
+.opt:after{content:"→";opacity:0;transition:opacity .2s;color:var(--cyan)}
+.opt:hover,.opt:focus-visible{border-color:#b69aff;background:#9e7bff14;transform:translateX(4px);outline:none}
+.opt:hover:after{opacity:1}
+.back{background:none;border:0;color:#8d97b0;font-size:12px;cursor:pointer;margin-top:auto;align-self:flex-start;padding:8px 0}
+.back:hover{color:#fff}
+.result{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;animation:fadeUp .5s ease}
+.gauge{width:150px;height:150px}
+.gauge circle{fill:none;stroke-width:11}
+.gauge .val{stroke:url(#gg);stroke-linecap:round;transition:stroke-dashoffset 1.4s cubic-bezier(.2,.7,.2,1)}
+.gauge text{fill:#fff;font-size:34px;font-weight:650;letter-spacing:-1px;font-family:Inter,sans-serif}
+.recs{list-style:none;padding:0;margin:18px 0 24px;display:grid;gap:10px}
+.recs li{padding:13px 15px;border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:#dfe2ee;line-height:1.55;background:#ffffff04}
+.recs li b{display:block;color:var(--cyan);font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.level{font-size:22px;font-weight:620;letter-spacing:-.03em;margin:8px 0 0}
+
+/* time zones */
+.tz-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.tz{border:1px solid var(--line);border-radius:16px;padding:18px 20px;background:#ffffff05;transition:transform .3s,border-color .3s}
+.tz:hover{transform:translateY(-4px);border-color:#ffffff40}
+.tz.team{border-color:#6fe9ed60;background:linear-gradient(135deg,#6fe9ed12,#9e7bff10)}
+.tz small{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8d97b0}
+.tz b{display:block;font-size:32px;font-weight:600;letter-spacing:-.04em;margin:8px 0 6px;font-variant-numeric:tabular-nums}
+.tz span{font-size:12px;color:#aeb7c9;display:flex;align-items:center;gap:8px}
+.timeline{border:1px solid var(--line);border-radius:20px;padding:26px 26px 20px;background:#0b0e1d}
+.tl-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#7c87a3;margin-bottom:20px}
+.tl-row{display:grid;grid-template-columns:140px 1fr;align-items:center;gap:14px;margin-bottom:12px;font-size:13px;color:#c9cfe0}
+.tl-track{position:relative;height:28px;border-radius:8px;background:repeating-linear-gradient(90deg,#ffffff06 0 calc(12.5% - 1px),#ffffff12 calc(12.5% - 1px) 12.5%)}
+.tl-bar{position:absolute;top:0;bottom:0;border-radius:8px;background:linear-gradient(90deg,#9e7bff80,#9e7bffc0);transform:scaleX(0);transform-origin:left;transition:transform 1.3s cubic-bezier(.2,.7,.2,1);display:flex;align-items:center;padding-left:10px;font-size:11px;color:#fff;white-space:nowrap;overflow:hidden}
+.tl-bar.team{background:linear-gradient(90deg,#6fe9ed80,#6fe9edc8);color:#06212a;font-weight:600}
+.timeline.visible .tl-bar{transform:scaleX(1)}
+.tl-now{position:absolute;top:-5px;bottom:-5px;width:2px;background:#fff;box-shadow:0 0 12px #fff;border-radius:2px}
+.tl-axis{display:flex;justify-content:space-between;margin-left:154px;font-size:10.5px;color:#6f7a96;margin-top:4px}
+.overlap{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.overlap div{font-size:12.5px;padding:9px 14px;border-radius:999px;border:1px solid var(--line);color:#c9cfe0}
+.overlap b{color:var(--cyan)}
+
+@media(max-width:850px){.demo-grid,.calc,.hc{grid-template-columns:1fr;gap:36px}.calc{gap:0}.calc-in{border-right:0;border-bottom:1px solid var(--line)}.tz-cards{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}}
+@media(max-width:550px){.calc-in,.calc-out,.quiz{padding:26px 20px}.tl-row{grid-template-columns:76px 1fr;font-size:11.5px}.tl-axis{margin-left:90px}.tl-bar{font-size:0}.result{grid-template-columns:1fr;justify-items:start}.rec-table .hide-sm{display:none}.kpi b{font-size:21px}.timeline{padding:20px 16px}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<header class="site" id="siteHeader">
+  <div class="container nav">
+    <a class="logo" href="#top" aria-label="Latam Services home"><span class="logo-mark"><img src="/logo-ls.png" alt="LS logo"></span> LATAM SERVICES</a>
+    <nav class="links" aria-label="Main">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#calculator">Savings calculator</a>
+      <a href="#health">Health check</a>
+      <a href="#industries">Industries</a>
+      <a href="#approach">Approach</a>
+      <a href="#engagement">Engagement</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Let's connect ↗</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+  <nav class="mobile-menu" aria-label="Mobile">
+    <a href="#capabilities">Capabilities</a><a href="#demo">Live demo</a><a href="#calculator">Savings calculator</a><a href="#health">Finance health check</a><a href="#industries">Industries</a><a href="#approach">Approach</a><a href="#engagement">Engagement models</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact ↗</a>
+  </nav>
+</header>
+
+<section id="top" class="hero">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="container hero-layout">
+    <div>
+      <div class="eyebrow reveal">International finance & operations consulting</div>
+      <h1 class="reveal d1">Global expertise.<br><span class="grad">Built for <span class="rotator" id="rotator"><span>clarity.</span></span></span></h1>
+      <p class="lead reveal d2">We help U.S. and international businesses run sharper finance, leaner operations and smarter processes — combining senior accounting expertise, automation and a nearshore team that works on your clock.</p>
+      <div class="actions reveal d3">
+        <a class="button button-primary" href="#contact">Book a discovery call <span>↗</span></a>
+        <a class="button button-outline" href="#calculator">Estimate your savings <span>↓</span></a>
+      </div>
+      <div class="hero-meta reveal d3">
+        <div><b>U.S.-registered</b>Company</div>
+        <div><b>Argentina-based</b>Delivery team</div>
+        <div><b>English · Español</b>Bilingual</div>
+      </div>
+    </div>
+    <div class="visual" id="visual" aria-hidden="true">
+      <div class="orb" id="orb"><div class="orb-core"></div><div class="ring one"></div><div class="ring two"></div><div class="ring three"></div><div class="orb-dot"></div></div>
+      <div class="orbit-label a"><i></i>FINANCE / INSIGHT</div>
+      <div class="orbit-label b"><i></i>PROCESS / AUTOMATION</div>
+      <div class="orbit-label c"><i></i>U.S. HOURS / NEARSHORE</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-label="Platforms we work with">
+  <div class="track">
+    <span>RealPage</span><span>Yardi</span><span>QuickBooks</span><span>SAP</span><span>Microsoft 365</span><span>Excel & Power Query</span><span>Python automation</span><span>AI-assisted workflows</span>
+    <span>RealPage</span><span>Yardi</span><span>QuickBooks</span><span>SAP</span><span>Microsoft 365</span><span>Excel & Power Query</span><span>Python automation</span><span>AI-assisted workflows</span>
+  </div>
+</div>
+
+<main>
+<section>
+  <div class="container">
+    <div class="head-row reveal">
+      <div><div class="section-tag">Why LATAM SERVICES</div><h2 class="section-title">Big-firm standards.<br><span class="accent">Boutique attention.</span></h2></div>
+      <p class="section-copy">You get the rigor of an international consultancy with a team that knows your files by name — at a cost structure that makes sense for growing businesses.</p>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><div class="num grad" data-count="70" data-prefix="~" data-suffix="%">~70%</div><p>of recurring AP, AR and reconciliation tasks automated in our live engagements</p></div>
+      <div class="stat"><div class="num grad" data-count="2" data-suffix=" hrs">2 hrs</div><p>maximum time difference with U.S. Eastern — real-time collaboration, not overnight hand-offs</p></div>
+      <div class="stat"><div class="num grad" data-count="2">2</div><p>working languages — English and Spanish — for U.S. and Latin American operations</p></div>
+      <div class="stat"><div class="num grad" data-count="100" data-suffix="%">100%</div><p>remote-ready delivery inside your own systems, with documented, auditable processes</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="demo" style="padding-top:20px">
+  <div class="container demo-grid">
+    <div class="reveal">
+      <div class="section-tag">See it in action</div>
+      <h2 class="section-title">Hours of work.<br><span class="accent">Done in seconds.</span></h2>
+      <p class="section-copy">This is how we approach a bank reconciliation: automation matches every transaction against the ledger, and our accountants focus only on the exceptions. Press run and watch.</p>
+      <div class="kpis">
+        <div class="kpi"><b id="kMatched">0</b><span>Auto-matched</span></div>
+        <div class="kpi"><b id="kExc" style="color:#fbbf24">0</b><span>Flagged for review</span></div>
+        <div class="kpi"><b id="kTime">0.0s</b><span>Processing time</span></div>
+      </div>
+      <p class="note">Simulated demo with sample data. Real engagements run inside your systems, with your approval controls.</p>
+    </div>
+    <div class="win gborder reveal d1">
+      <div class="win-bar"><i></i><i></i><i></i><span>bank_rec_october.py</span></div>
+      <div style="overflow-x:auto"><table class="rec-table"><thead><tr><th>Date</th><th>Description</th><th class="num">Bank</th><th class="num hide-sm">Ledger</th><th>Status</th></tr></thead><tbody id="recBody"></tbody></table></div>
+      <div class="win-foot"><button class="button button-primary small-btn" id="runRec">▶ Run automation</button><div class="pbar"><i id="recBar"></i></div><button class="button button-outline small-btn" id="resetRec">Reset</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="caps" id="capabilities">
+  <div class="container">
+    <div class="head-row reveal">
+      <div><div class="section-tag">Capabilities</div><h2 class="section-title">Expertise that<br>creates momentum.</h2></div>
+      <p class="section-copy">Integrated services across the functions that keep your business running — delivered as projects or as an ongoing extension of your team.</p>
+    </div>
+    <div class="tabs reveal">
+      <div class="tab-list" role="tablist" aria-label="Capabilities">
+        <button class="tab-btn" role="tab" aria-selected="true" aria-controls="p1" id="t1"><span><small>01</small>Accounting & Finance Ops</span></button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="p2" id="t2"><span><small>02</small>Automation & AI</span></button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="p3" id="t3"><span><small>03</small>Financial Advisory</span></button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="p4" id="t4"><span><small>04</small>Tax & Compliance</span></button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="p5" id="t5"><span><small>05</small>Managed Business Support</span></button>
+      </div>
+      <div>
+        <article class="tab-panel active" role="tabpanel" id="p1" aria-labelledby="t1">
+          <div class="section-tag">01 / Finance</div>
+          <h3>Accounting & financial operations</h3>
+          <p>Dependable, close-ready accounting delivered by certified public accountants. We take ownership of the daily, weekly and monthly cycle so your team can focus on decisions.</p>
+          <div class="cap-items">
+            <div>Accounts payable: invoice intake, verification, GL coding and approval routing</div>
+            <div>Accounts receivable, collections tracking and cash application</div>
+            <div>Bank and credit card reconciliations</div>
+            <div>Month-end close support and journal entries</div>
+            <div>Property management accounting (RealPage, Yardi)</div>
+            <div>Management and financial reporting packages</div>
+          </div>
+          <div class="outcome">Outcome: a faster, cleaner close with fewer errors and a clear audit trail.</div>
+        </article>
+        <article class="tab-panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+          <div class="section-tag">02 / Transformation</div>
+          <h3>Process automation & AI</h3>
+          <p>We are accountants who code. We map your workflows, remove the repetitive steps and build automations your team can trust — designed by people who understand the accounting behind them.</p>
+          <div class="cap-items">
+            <div>Python scripts for reconciliations, invoice auditing and file processing</div>
+            <div>Excel, Power Query and reporting automation</div>
+            <div>AI-assisted document review and data extraction</div>
+            <div>Data cleanup, standardization and migration support</div>
+            <div>Workflow mapping and process documentation (SOPs)</div>
+            <div>Controls built into every automation — not bolted on</div>
+          </div>
+          <div class="outcome">Outcome: hours of manual work returned to your team every week.</div>
+        </article>
+        <article class="tab-panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+          <div class="section-tag">03 / Advisory</div>
+          <h3>Financial advisory & insights</h3>
+          <p>Numbers are only useful when they drive decisions. We turn your financial data into clear analysis, forecasts and dashboards for owners and leadership teams.</p>
+          <div class="cap-items">
+            <div>Budgeting, forecasting and cash-flow planning</div>
+            <div>KPI design and management dashboards</div>
+            <div>Profitability and cost analysis by property, unit or business line</div>
+            <div>Variance analysis and board-ready reporting</div>
+            <div>Financial process and internal-control reviews</div>
+            <div>Support for audits and due diligence requests</div>
+          </div>
+          <div class="outcome">Outcome: leadership sees what matters, when it matters.</div>
+        </article>
+        <article class="tab-panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+          <div class="section-tag">04 / Tax</div>
+          <h3>Tax & compliance support</h3>
+          <p>Years of hands-on tax experience in Argentina, applied to cross-border operations. We help companies with Latin American activity stay organized and compliant — and coordinate with your U.S. tax advisors.</p>
+          <div class="cap-items">
+            <div>Argentine tax compliance for companies and individuals</div>
+            <div>Support for businesses expanding into Argentina and LATAM</div>
+            <div>Vendor documentation and 1099 data preparation</div>
+            <div>Sales tax and compliance data organization</div>
+            <div>Year-end workpapers for your CPA firm</div>
+            <div>Regulatory calendars and deadline tracking</div>
+          </div>
+          <div class="outcome">Outcome: fewer surprises, organized records and smooth hand-offs to your tax preparer.</div>
+        </article>
+        <article class="tab-panel" role="tabpanel" id="p5" aria-labelledby="t5" hidden>
+          <div class="section-tag">05 / Partnership</div>
+          <h3>Managed business support</h3>
+          <p>Flexible, ongoing operational support that scales with you — a dedicated team working inside your systems, under your processes, aligned to your priorities.</p>
+          <div class="cap-items">
+            <div>Dedicated finance and back-office specialists</div>
+            <div>Vendor management and payment operations</div>
+            <div>Back-office coverage for peaks, leave and growth</div>
+            <div>Bilingual operations support (EN/ES)</div>
+            <div>Documented SOPs and knowledge transfer</div>
+            <div>Regular performance reporting and reviews</div>
+          </div>
+          <div class="outcome">Outcome: the capacity of a larger team, without the overhead.</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="calculator">
+  <div class="container">
+    <div class="head-row reveal">
+      <div><div class="section-tag">Savings calculator</div><h2 class="section-title">What could your<br>team <span class="accent">get back?</span></h2></div>
+      <p class="section-copy">Move the sliders to model your own numbers. Every assumption is visible and editable — no sign-up needed to see results.</p>
+    </div>
+    <div class="calc gborder reveal">
+      <div class="calc-in">
+        <div class="rng"><div class="rng-top"><label for="cHours">Hours per month on accounting & back-office tasks</label><output id="vHours"></output></div><input type="range" id="cHours" min="20" max="800" step="10" value="160"></div>
+        <div class="rng"><div class="rng-top"><label for="cCost">Fully loaded in-house cost per hour</label><output id="vCost"></output></div><input type="range" id="cCost" min="20" max="120" step="1" value="45"></div>
+        <div class="rng"><div class="rng-top"><label for="cAuto">Share of tasks that can be automated</label><output id="vAuto"></output></div><input type="range" id="cAuto" min="0" max="80" step="5" value="40"></div>
+        <div class="rng"><div class="rng-top"><label for="cRate">Assumed nearshore rate per hour</label><output id="vRate"></output></div><input type="range" id="cRate" min="15" max="60" step="1" value="28"></div>
+        <p class="note">Illustrative estimate only — not a quote. Your proposal is based on a review of your real scope and volumes.</p>
+      </div>
+      <div class="calc-out">
+        <div class="chip"><span class="live-dot"></span>Estimated annual savings</div>
+        <div class="big grad" id="oAnnual">$0</div>
+        <div class="out-row">
+          <div class="kpi"><b id="oHours">0</b><span>Hours freed per month</span></div>
+          <div class="kpi"><b id="oPct">0%</b><span>Lower monthly cost</span></div>
+        </div>
+        <div class="charts">
+          <div class="chart-card"><h4>Monthly cost</h4>
+            <svg viewBox="0 0 200 160" aria-label="Monthly cost comparison">
+              <defs><linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fe9ed"/><stop offset="1" stop-color="#9e7bff"/></linearGradient></defs>
+              <line x1="10" y1="130" x2="190" y2="130" stroke="#ffffff25"/>
+              <rect id="b1" class="bar" x="32" y="20" width="54" height="110" rx="7" fill="#4b5470"/>
+              <rect id="b2" class="bar" x="114" y="20" width="54" height="110" rx="7" fill="url(#gb)"/>
+              <text id="bv1" x="59" y="14" text-anchor="middle" fill="#c9cfe0" font-size="11" font-weight="600"></text>
+              <text id="bv2" x="141" y="14" text-anchor="middle" fill="#6fe9ed" font-size="11" font-weight="600"></text>
+              <text x="59" y="148" text-anchor="middle" fill="#8d97b0" font-size="10">Today</text>
+              <text x="141" y="148" text-anchor="middle" fill="#8d97b0" font-size="10">With us</text>
+            </svg>
+          </div>
+          <div class="chart-card"><h4>Cumulative cost · 12 months</h4>
+            <svg viewBox="0 0 300 160" id="lineChart" aria-label="Cumulative cost over 12 months"></svg>
+            <div class="legend"><span><i style="background:#8d97b0"></i>Today</span><span><i style="background:#6fe9ed"></i>With LATAM SERVICES</span><span><i style="background:#6fe9ed30;height:8px"></i>Savings</span></div>
+          </div>
+        </div>
+        <button class="button button-primary" id="sendEstimate" style="margin-top:22px">Get a detailed proposal <span>↗</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="industries">
+  <div class="container">
+    <div class="head-row reveal">
+      <div><div class="section-tag">Industries</div><h2 class="section-title">Deep where it counts.</h2></div>
+      <p class="section-copy">Our experience is rooted in the operational realities of these sectors — their systems, their cycles and their pressure points.</p>
+    </div>
+    <div class="ind-grid">
+      <article class="ind reveal"><span class="tag">Core</span><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6M9 10h.01M15 10h.01"/></svg></div><h3>Real estate & property management</h3><p>Multifamily and commercial portfolios: vendor invoices, property-level GL, bank recs and owner reporting in RealPage and Yardi.</p></article>
+      <article class="ind reveal d1"><div class="icon"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Startups & scale-ups</h3><p>Finance foundations that grow with you: clean books, scalable processes and reporting investors understand.</p></article>
+      <article class="ind reveal d2"><div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></div><h3>Professional services</h3><p>Firms that need reliable back-office execution and better visibility into margins, billing and cash.</p></article>
+      <article class="ind reveal d3"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Cross-border businesses</h3><p>U.S. companies operating in Latin America and LATAM companies entering the U.S. — bilingual, bi-cultural support.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container why-grid">
+    <div class="reveal">
+      <div class="section-tag">The nearshore advantage</div>
+      <h2 class="section-title">Your hours.<br><span class="accent">Our expertise.</span></h2>
+      <p class="section-copy">Offshore models often trade quality for cost. Ours doesn't. A professional team in Argentina gives you overlapping working hours, cultural alignment with U.S. business and certified accounting talent.</p>
+    </div>
+    <div class="compare reveal d1">
+      <div class="compare-row h"><div></div><div>Traditional offshore</div><div>LATAM SERVICES</div></div>
+      <div class="compare-row"><div>Time-zone overlap with U.S.</div><div>Little to none</div><div><span class="ok">✓</span>Full business day</div></div>
+      <div class="compare-row"><div>Accounting credentials</div><div>Varies</div><div><span class="ok">✓</span>Certified public accountants</div></div>
+      <div class="compare-row"><div>Automation built in</div><div>Rarely</div><div><span class="ok">✓</span>Python & AI by default</div></div>
+      <div class="compare-row"><div>Communication</div><div>Ticket-based</div><div><span class="ok">✓</span>Direct, real-time, bilingual</div></div>
+      <div class="compare-row"><div>U.S. contracting</div><div>Foreign entity</div><div><span class="ok">✓</span>U.S.-registered company</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" style="padding-bottom:60px">
+  <div class="container">
+    <div class="head-row reveal">
+      <div><div class="section-tag">Working on your clock</div><h2 class="section-title">Same day.<br><span class="accent">Same hours.</span></h2></div>
+      <p class="section-copy">A live view of our team's working day against U.S. time zones. When you're at your desk, so are we.</p>
+    </div>
+    <div class="tz-cards reveal" id="tzCards"></div>
+    <div class="timeline reveal d1" id="timeline"></div>
+  </div>
+</section>
+
+<section id="health" style="padding-top:60px">
+  <div class="container hc">
+    <div class="reveal">
+      <div class="section-tag">Free finance health check</div>
+      <h2 class="section-title">How healthy is your<br><span class="accent">finance function?</span></h2>
+      <p class="section-copy">Five quick questions. An instant score and tailored recommendations — no sign-up required.</p>
+      <div class="chip" style="margin-top:24px"><span class="live-dot"></span>Takes about one minute</div>
+    </div>
+    <div class="quiz gborder reveal d1" id="quiz" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="container">
+    <div class="head-row reveal">
+      <div><div class="section-tag">Our approach</div><h2 class="section-title">From first call<br>to <span class="accent">lasting impact.</span></h2></div>
+      <p class="section-copy">A structured, transparent method — so you always know what we're doing, why, and what comes next.</p>
+    </div>
+    <div class="steps reveal" id="steps">
+      <div class="steps-line"><i></i></div>
+      <div class="step"><div class="dot">01</div><h3>Discover</h3><p>We learn your business, systems and pain points, and map current workflows end to end.</p></div>
+      <div class="step"><div class="dot">02</div><h3>Design</h3><p>We propose scope, controls and automation opportunities, with clear deliverables and timelines.</p></div>
+      <div class="step"><div class="dot">03</div><h3>Deliver</h3><p>We onboard into your systems, document every process and run the work with agreed SLAs.</p></div>
+      <div class="step"><div class="dot">04</div><h3>Improve</h3><p>We measure, report and continuously automate — so the engagement gets more efficient over time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="caps" id="engagement">
+  <div class="container">
+    <div class="head-row reveal">
+      <div><div class="section-tag">Engagement models</div><h2 class="section-title">Work with us<br>your way.</h2></div>
+      <p class="section-copy">Start small, prove value, then scale. Every engagement begins with a no-cost discovery call.</p>
+    </div>
+    <div class="models">
+      <article class="model reveal"><div class="label">Project-based</div><h3>Defined projects</h3><p>Fixed scope and timeline for a specific outcome.</p><ul><li>Clean-ups and catch-up bookkeeping</li><li>Automation builds</li><li>Process and controls reviews</li></ul><a class="button button-outline" href="#contact">Discuss a project <span>→</span></a></article>
+      <article class="model featured reveal d1"><div class="label">Most popular</div><h3>Managed services</h3><p>We own a function end to end, with SLAs and reporting.</p><ul><li>AP, AR and reconciliations</li><li>Monthly close support</li><li>Continuous automation</li></ul><a class="button button-primary" href="#contact">Get a proposal <span>→</span></a></article>
+      <article class="model reveal d2"><div class="label">Team extension</div><h3>Dedicated specialists</h3><p>Professionals embedded in your team and tools.</p><ul><li>Full-time or part-time capacity</li><li>Your processes, your systems</li><li>Flexible scaling</li></ul><a class="button button-outline" href="#contact">Build your team <span>→</span></a></article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <div class="section-tag">Who we are</div>
+      <h2 class="section-title">Global perspective.<br><span class="accent">Personal commitment.</span></h2>
+      <div class="values">
+        <div><b>Rigor</b>Accounting standards and controls in every deliverable.</div>
+        <div><b>Transparency</b>Clear scope, clear reporting, no surprises.</div>
+        <div><b>Innovation</b>Automation and AI applied where they truly help.</div>
+        <div><b>Partnership</b>We succeed when your team does.</div>
+      </div>
+    </div>
+    <div class="about-details reveal d1">
+      <p>LATAM SERVICES is a U.S.-registered consulting company with a professional team based in Argentina, supporting businesses with accounting, finance, tax and operational solutions.</p>
+      <p>Our team is led by certified public accountants with experience across corporate finance, tax and U.S. business operations — including day-to-day accounting for U.S. property management companies.</p>
+      <p>What sets us apart is how we work: every process we take on is documented, controlled and, wherever possible, automated. Our clients don't just get the work done — they get a better way of doing it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:40px">
+  <div class="container faq-grid">
+    <div class="reveal"><div class="section-tag">FAQ</div><h2 class="section-title">Questions,<br><span class="accent">answered.</span></h2><p class="section-copy">Don't see yours? <a href="#contact" style="color:var(--cyan)">Ask us directly.</a></p></div>
+    <div class="faq reveal d1">
+      <details open><summary>Do you work inside our existing systems?</summary><p>Yes. We work in the platforms you already use — RealPage, Yardi, QuickBooks, SAP, Microsoft 365 and others — following your approval flows and access policies.</p></details>
+      <details><summary>How do you handle data security and confidentiality?</summary><p>We sign NDAs, use the access levels you grant (ideally individual, role-based user accounts), keep work inside your environment whenever possible and document who does what.</p></details>
+      <details><summary>What hours does your team work?</summary><p>Our team is in Argentina, one to two hours ahead of U.S. Eastern Time, so we work during your business day and can join your meetings live.</p></details>
+      <details><summary>How do we contract with you?</summary><p>LATAM SERVICES is a U.S.-registered company, so you contract with a U.S. entity under a standard services agreement, with invoicing in U.S. dollars.</p></details>
+      <details><summary>How quickly can we get started?</summary><p>After a discovery call we send a proposal. Onboarding typically starts with a short knowledge-transfer period while we document your processes.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:40px">
+  <div class="container">
+    <div class="contact reveal">
+      <div>
+        <div class="section-tag">Let's build what's next</div>
+        <h2>Better operations.<br>Stronger business.</h2>
+        <p class="info">Tell us a little about your business and what you'd like to improve. We'll come back within one business day to schedule a discovery call.</p>
+        <div class="contact-list">
+          <a href="mailto:contact@latamservices.us"><span>✉</span>contact@latamservices.us</a>
+          <div><span>◷</span>Mon–Fri · U.S. business hours</div>
+          <div><span>◎</span>U.S.-registered · Team in Argentina</div>
+        </div>
+      </div>
+      <form id="contactForm" novalidate>
+        <div class="field"><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="service">Interested in</label>
+          <select id="service" name="service"><option>Accounting & finance ops</option><option>Automation & AI</option><option>Financial advisory</option><option>Tax & compliance</option><option>Managed business support</option><option>Not sure yet</option></select></div>
+        <div class="field full"><label for="message">How can we help?</label><textarea id="message" name="message" required></textarea></div>
+        <button class="button button-primary" type="submit" style="grid-column:1/-1;justify-content:center">Send message <span>↗</span></button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="container">
+  <footer class="footer">
+    <div><a class="logo" href="#top"><span class="logo-mark"><img src="/logo-ls.png" alt="LS logo"></span> LATAM SERVICES</a><p>International finance, operations and automation consulting for U.S. and Latin American businesses.</p></div>
+    <div><h4>Capabilities</h4><ul><li><a href="#capabilities">Accounting & finance ops</a></li><li><a href="#capabilities">Automation & AI</a></li><li><a href="#capabilities">Financial advisory</a></li><li><a href="#capabilities">Tax & compliance</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="#about">About us</a></li><li><a href="#approach">Our approach</a></li><li><a href="#engagement">Engagement models</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="mailto:contact@latamservices.us">contact@latamservices.us</a></li><li><a href="#contact">Book a discovery call</a></li></ul></div>
+  </footer>
+  <div class="legal"><div>© <span id="year"></span> LATAM SERVICES. All rights reserved.</div><div>Finance · Operations · Automation</div></div>
+</div>
+<a href="#top" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+<script>
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // header, progress, back-to-top
+  const header = document.getElementById('siteHeader'), bar = document.getElementById('progress'), toTop = document.getElementById('toTop');
+  function onScroll(){
+    const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    header.classList.toggle('scrolled', y > 20);
+    bar.style.width = (h > 0 ? y / h * 100 : 0) + '%';
+    toTop.classList.toggle('show', y > 700);
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // mobile menu
+  const burger = document.getElementById('burger');
+  burger.addEventListener('click', () => {
+    const open = document.body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+    document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', false);
+  }));
+
+  // reveal + counters + steps
+  function countUp(el){
+    const end = +el.dataset.count, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+    if (reduce) return;
+    const t0 = performance.now(), dur = 1600;
+    (function tick(t){
+      const p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + Math.round(end * e) + suf;
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+  if ('IntersectionObserver' in window){
+    const obs = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('[data-count]').forEach(countUp);
+      obs.unobserve(e.target);
+    }), {threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  } else document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+
+  // rotating word
+  const words = ['clarity.','growth.','efficiency.','what\u2019s next.'];
+  const rot = document.getElementById('rotator');
+  if (rot && !reduce){
+    let i = 0;
+    setInterval(() => {
+      const cur = rot.querySelector('span'); cur.classList.add('out');
+      setTimeout(() => {
+        i = (i + 1) % words.length;
+        cur.textContent = words[i]; cur.classList.remove('out'); cur.classList.add('in');
+        requestAnimationFrame(() => requestAnimationFrame(() => cur.classList.remove('in')));
+      }, 450);
+    }, 2800);
+  }
+
+  // tabs
+  const tabs = [...document.querySelectorAll('.tab-btn')];
+  function selectTab(btn){
+    tabs.forEach(b => { b.setAttribute('aria-selected', b === btn); const p = document.getElementById(b.getAttribute('aria-controls')); p.hidden = b !== btn; p.classList.toggle('active', b === btn); });
+  }
+  tabs.forEach((b, idx) => {
+    b.addEventListener('click', () => selectTab(b));
+    b.addEventListener('keydown', e => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight'){ e.preventDefault(); const n = tabs[(idx+1)%tabs.length]; selectTab(n); n.focus(); }
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft'){ e.preventDefault(); const n = tabs[(idx-1+tabs.length)%tabs.length]; selectTab(n); n.focus(); }
+    });
+  });
+
+  // orb tilt + cursor glow
+  const orb = document.getElementById('orb'), visual = document.getElementById('visual'), glow = document.getElementById('glow');
+  if (matchMedia('(pointer:fine)').matches && !reduce){
+    visual.addEventListener('pointermove', e => {
+      const r = visual.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      orb.style.animationPlayState = 'paused'; orb.style.transform = `rotateY(${x*18}deg) rotateX(${-y*18}deg)`;
+    });
+    visual.addEventListener('pointerleave', () => { orb.style.transform = ''; orb.style.animationPlayState = 'running'; });
+    addEventListener('pointermove', e => { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; }, {passive:true});
+  } else glow.style.display = 'none';
+
+  // contact form → opens the visitor's email client with the message pre-filled
+  const form = document.getElementById('contactForm'), status = document.getElementById('formStatus');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const f = form.elements;
+    if (!f.name.value.trim() || !f.email.checkValidity() || !f.email.value || !f.message.value.trim()){
+      status.style.color = '#ffb4b4'; status.textContent = 'Please fill in your name, a valid email and a message.'; return;
+    }
+    const subject = `Inquiry — ${f.service.value}${f.company.value ? ' — ' + f.company.value : ''}`;
+    const body = `Name: ${f.name.value}\nCompany: ${f.company.value}\nEmail: ${f.email.value}\nInterested in: ${f.service.value}\n\n${f.message.value}`;
+    location.href = `mailto:contact@latamservices.us?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    status.style.color = ''; status.textContent = 'Opening your email app… If nothing happens, write to contact@latamservices.us.';
+  });
+
+  /* ===== shared helpers ===== */
+  const $ = id => document.getElementById(id);
+  const money = n => '$' + Math.round(n).toLocaleString('en-US');
+  const short = n => n >= 1e6 ? '$' + (n/1e6).toFixed(1) + 'M' : n >= 1e3 ? '$' + Math.round(n/1e3) + 'k' : '$' + Math.round(n);
+  function prefill(service, msg){
+    const sel = form.elements.service;
+    [...sel.options].forEach(o => { if (o.text === service) sel.value = o.value; });
+    form.elements.message.value = msg;
+    $('contact').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
+    setTimeout(() => form.elements.name.focus({preventScroll:true}), 800);
+  }
+
+  /* ===== live reconciliation demo ===== */
+  const R = [
+    ['10/01','ACH — Rent deposits',48250,48250],
+    ['10/02','Vendor — Apex Plumbing',-1840,-1840],
+    ['10/03','Utility — City Water',-3215.40,-3215.40],
+    ['10/06','Vendor — BrightLine HVAC',-2760,-2670],
+    ['10/07','Bank service fee',-35,null],
+    ['10/09','ACH — Rent deposits',22310,22310],
+    ['10/10','Insurance premium',-4120,-4120],
+    ['10/14','Vendor — GreenCare Landscaping',-1450,-1450],
+    ['10/15','Payroll transfer',-18900,-18900],
+    ['10/16','Electric — Metro Power',-2987.65,-2987.65]
+  ];
+  const fmt = n => (n < 0 ? '-' : '') + '$' + Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+  const recBody = $('recBody'); let recRunning = false, recTimers = [];
+  function drawRec(){
+    recBody.innerHTML = R.map((r,i) => `<tr id="rr${i}"><td>${r[0]}</td><td>${r[1]}</td><td class="num">${fmt(r[2])}</td><td class="num hide-sm">${r[3]===null?'—':fmt(r[3])}</td><td><span class="st">Pending</span></td></tr>`).join('');
+    $('kMatched').textContent = 0; $('kExc').textContent = 0; $('kTime').textContent = '0.0s'; $('recBar').style.width = 0;
+  }
+  function resetRec(){ recTimers.forEach(clearTimeout); recTimers = []; recRunning = false; $('runRec').textContent = '▶ Run automation'; drawRec(); }
+  $('runRec').addEventListener('click', () => {
+    if (recRunning) return;
+    resetRec(); recRunning = true; $('runRec').textContent = 'Running…';
+    const t0 = performance.now(); let m = 0, x = 0; const step = reduce ? 60 : 280;
+    R.forEach((r,i) => {
+      recTimers.push(setTimeout(() => {
+        const tr = $('rr'+i); tr.classList.add('scan');
+        recTimers.push(setTimeout(() => {
+          tr.classList.remove('scan');
+          const cell = tr.lastElementChild;
+          if (r[3] === null){ cell.innerHTML = '<span class="st warn">Not in ledger</span>'; x++; }
+          else if (r[2] !== r[3]){ cell.innerHTML = `<span class="st warn">Diff ${fmt(Math.abs(r[2]-r[3]))}</span>`; x++; }
+          else { cell.innerHTML = '<span class="st good">Matched</span>'; m++; }
+          $('kMatched').textContent = m; $('kExc').textContent = x;
+          $('kTime').textContent = ((performance.now()-t0)/1000).toFixed(1) + 's';
+          $('recBar').style.width = ((i+1)/R.length*100) + '%';
+          if (i === R.length-1){ recRunning = false; $('runRec').textContent = '▶ Run again'; }
+        }, step*0.6));
+      }, i*step));
+    });
+  });
+  $('resetRec').addEventListener('click', resetRec);
+  drawRec();
+
+  /* ===== savings calculator ===== */
+  const cIn = ['cHours','cCost','cAuto','cRate'].map($);
+  let lastAnnual = 0, tweenId;
+  function tween(el, from, to){
+    cancelAnimationFrame(tweenId);
+    if (reduce){ el.textContent = money(to); return; }
+    const t0 = performance.now();
+    (function f(t){ const p = Math.min((t-t0)/450,1), e = 1-Math.pow(1-p,3); el.textContent = money(from+(to-from)*e); if (p<1) tweenId = requestAnimationFrame(f); })(t0);
+  }
+  let calcState = {};
+  function calc(){
+    cIn.forEach(el => el.style.setProperty('--p', ((el.value-el.min)/(el.max-el.min)*100) + '%'));
+    const h = +cIn[0].value, c = +cIn[1].value, a = +cIn[2].value/100, r = +cIn[3].value;
+    $('vHours').textContent = h + ' h'; $('vCost').textContent = '$' + c; $('vAuto').textContent = Math.round(a*100) + '%'; $('vRate').textContent = '$' + r;
+    const cur = h*c, neu = h*(1-a)*r, save = Math.max(cur-neu,0), annual = save*12;
+    calcState = {h,c,a,r,cur,neu,annual};
+    tween($('oAnnual'), lastAnnual, annual); lastAnnual = annual;
+    $('oHours').textContent = Math.round(h*a);
+    $('oPct').textContent = (cur ? Math.round(save/cur*100) : 0) + '%';
+    // bars
+    const max = Math.max(cur,neu) || 1, s1 = cur/max, s2 = neu/max;
+    $('b1').style.transform = `scaleY(${s1})`; $('b2').style.transform = `scaleY(${s2})`;
+    $('bv1').textContent = short(cur); $('bv1').setAttribute('y', 130-110*s1-6);
+    $('bv2').textContent = short(neu); $('bv2').setAttribute('y', 130-110*s2-6);
+    // cumulative line chart
+    const x0=36,x1=292,y0=12,y1=128, top = Math.max(cur,neu)*12 || 1;
+    const px = m => x0+(x1-x0)*m/12, py = v => y1-(y1-y0)*v/top;
+    const A = [], B = [];
+    for (let m=0;m<=12;m++){ A.push(`${px(m).toFixed(1)},${py(cur*m).toFixed(1)}`); B.push(`${px(m).toFixed(1)},${py(neu*m).toFixed(1)}`); }
+    let g = '';
+    [0,.5,1].forEach(f => { const y = py(top*f); g += `<line x1="${x0}" x2="${x1}" y1="${y}" y2="${y}" stroke="#ffffff12"/><text x="${x0-6}" y="${y+3}" text-anchor="end" fill="#6f7a96" font-size="9">${short(top*f)}</text>`; });
+    [[0,'0'],[6,'6 mo'],[12,'12 mo']].forEach(([m,l]) => g += `<text x="${px(m)}" y="146" text-anchor="middle" fill="#6f7a96" font-size="9">${l}</text>`);
+    g += `<polygon points="${A.join(' ')} ${B.slice().reverse().join(' ')}" fill="#6fe9ed22"/>`;
+    g += `<polyline class="draw" pathLength="1" points="${A.join(' ')}" fill="none" stroke="#8d97b0" stroke-width="2" stroke-linecap="round"/>`;
+    g += `<polyline class="draw" pathLength="1" points="${B.join(' ')}" fill="none" stroke="#6fe9ed" stroke-width="2.5" stroke-linecap="round"/>`;
+    g += `<circle cx="${px(12)}" cy="${py(neu*12)}" r="4" fill="#6fe9ed"/><circle cx="${px(12)}" cy="${py(cur*12)}" r="3.5" fill="#8d97b0"/>`;
+    $('lineChart').innerHTML = g;
+  }
+  cIn.forEach(el => el.addEventListener('input', calc)); calc();
+  $('sendEstimate').addEventListener('click', () => {
+    const s = calcState;
+    prefill('Accounting & finance ops', `Hi LATAM SERVICES team,\n\nI used your savings calculator and would like a detailed proposal.\n\n• Hours per month on accounting/back-office: ${s.h}\n• Current cost per hour: $${s.c}\n• Estimated automatable share: ${Math.round(s.a*100)}%\n• Estimated annual savings: ${money(s.annual)}\n\nAbout our business:\n`);
+  });
+
+  /* ===== finance health check ===== */
+  const Q = [
+    {q:'How long does your month-end close take?', o:['More than 15 days','8 to 15 days','Under 8 days'], s:'Accounting & finance ops', r:'Shorten the close with a documented checklist and reconciliations done weekly, not monthly.'},
+    {q:'How are bank reconciliations done today?', o:['Manually, in spreadsheets','Partly automated','Automated, with human review'], s:'Automation & AI', r:'Automate bank matching so your team only reviews exceptions.'},
+    {q:'How are vendor invoices processed?', o:['Email or paper, keyed in manually','Some tools, many manual steps','Automated capture and approvals'], s:'Accounting & finance ops', r:'Standardize AP intake, verification and GL coding with clear approval routing.'},
+    {q:'Does leadership get reliable monthly reports on time?', o:['Rarely','Sometimes','Always'], s:'Financial advisory', r:'Build a KPI dashboard and a monthly reporting package leadership can act on.'},
+    {q:'How much of your team\u2019s time goes to repetitive tasks?', o:['More than 50%','25% to 50%','Less than 25%'], s:'Automation & AI', r:'Map repetitive workflows and automate the highest-volume ones first.'}
+  ];
+  const quiz = $('quiz'); let ans = [];
+  function renderQ(){
+    const i = ans.length;
+    if (i === Q.length) return renderResult();
+    quiz.innerHTML = `<div class="q-top"><span>Question ${i+1} of ${Q.length}</span><span>${Math.round(i/Q.length*100)}%</span></div>
+      <div class="q-prog"><i style="width:${i/Q.length*100}%"></i></div>
+      <div class="q-body"><h3>${Q[i].q}</h3>${Q[i].o.map((o,k) => `<button class="opt" data-k="${k}">${o}</button>`).join('')}</div>
+      ${i ? '<button class="back" id="qBack">← Back</button>' : ''}`;
+    quiz.querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => { ans.push(+b.dataset.k); renderQ(); }));
+    if (i) $('qBack').addEventListener('click', () => { ans.pop(); renderQ(); });
+  }
+  function renderResult(){
+    const score = Math.round(ans.reduce((a,b)=>a+b,0) / (Q.length*2) * 100);
+    const level = score < 40 ? ['Needs attention','#fb7185'] : score < 75 ? ['Room to optimize','#fbbf24'] : ['Strong foundation','#4ade80'];
+    const weak = Q.map((q,i) => ({...q, v:ans[i]})).filter(q => q.v < 2).sort((a,b) => a.v-b.v).slice(0,3);
+    const recs = weak.length ? weak.map(w => `<li><b>${w.s}</b>${w.r}</li>`).join('') : '<li><b>Next level</b>Your fundamentals are solid. Automation can free your team for analysis and growth projects.</li>';
+    const C = 2*Math.PI*62;
+    quiz.innerHTML = `<div class="q-top"><span>Your results</span><span>100%</span></div><div class="q-prog"><i style="width:100%"></i></div>
+      <div class="result">
+        <svg class="gauge" viewBox="0 0 150 150"><defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#9e7bff"/><stop offset="1" stop-color="#6fe9ed"/></linearGradient></defs>
+          <circle cx="75" cy="75" r="62" stroke="#ffffff12"/>
+          <circle class="val" cx="75" cy="75" r="62" stroke-dasharray="${C}" stroke-dashoffset="${C}" transform="rotate(-90 75 75)"/>
+          <text x="75" y="87" text-anchor="middle" id="gNum">0</text></svg>
+        <div><div class="section-tag">Finance health score</div><p class="level" style="color:${level[1]}">${level[0]}</p></div>
+      </div>
+      <ul class="recs">${recs}</ul>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="button button-primary" id="qTalk">Discuss my results <span>↗</span></button><button class="button button-outline" id="qRetake">Retake</button></div>`;
+    requestAnimationFrame(() => requestAnimationFrame(() => { quiz.querySelector('.val').style.strokeDashoffset = C*(1-score/100); }));
+    const t0 = performance.now(), g = $('gNum');
+    (function f(t){ const p = reduce ? 1 : Math.min((t-t0)/1400,1); g.textContent = Math.round(score*(1-Math.pow(1-p,3))); if (p<1) requestAnimationFrame(f); })(t0);
+    $('qRetake').addEventListener('click', () => { ans = []; renderQ(); });
+    $('qTalk').addEventListener('click', () => {
+      const lines = Q.map((q,i) => `• ${q.q} ${q.o[ans[i]]}`).join('\n');
+      prefill(weak[0] ? weak[0].s : 'Not sure yet', `Hi LATAM SERVICES team,\n\nI completed your finance health check (score: ${score}/100 — ${level[0]}) and would like to discuss the results.\n\n${lines}\n\nAbout our business:\n`);
+    });
+  }
+  renderQ();
+
+  /* ===== live time zones ===== */
+  const ZONES = [
+    {n:'New York', tz:'America/New_York', s:9, e:17},
+    {n:'Chicago', tz:'America/Chicago', s:9, e:17},
+    {n:'Los Angeles', tz:'America/Los_Angeles', s:9, e:17},
+    {n:'Our team · Córdoba', short:'Our team', tz:'America/Argentina/Cordoba', s:9, e:18, team:true}
+  ];
+  function offsetMin(tz, d){
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:tz,hourCycle:'h23',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).formatToParts(d).map(x => [x.type,x.value]));
+    return Math.round((Date.UTC(p.year,p.month-1,p.day,p.hour,p.minute) - Math.floor(d.getTime()/60000)*60000)/60000);
+  }
+  function localHour(tz, d){ const m = d.getUTCHours()*60 + d.getUTCMinutes() + offsetMin(tz,d); return (((m % 1440) + 1440) % 1440)/60; }
+  const AX0 = 6, AX1 = 22;
+  const lab = h => { const hh = ((h % 24) + 24) % 24; return (hh % 12 || 12) + (hh < 12 ? ' AM' : ' PM'); };
+  function drawTZ(){
+    const d = new Date(), eo = offsetMin('America/New_York', d), nowET = localHour('America/New_York', d);
+    const team = ZONES[3], tS = team.s + (eo - offsetMin(team.tz,d))/60, tE = team.e + (eo - offsetMin(team.tz,d))/60;
+    $('tzCards').innerHTML = ZONES.map(z => {
+      const lh = localHour(z.tz, d), open = lh >= z.s && lh < z.e && ![0,6].includes(new Date(d.toLocaleString('en-US',{timeZone:z.tz})).getDay());
+      const time = d.toLocaleTimeString('en-US',{timeZone:z.tz,hour:'numeric',minute:'2-digit'});
+      const st = z.team ? (open ? 'Team online' : 'Team offline — back at 9 AM') : (open ? 'Business hours' : 'After hours');
+      return `<div class="tz${z.team?' team':''}"><small>${z.n}</small><b>${time}</b><span><i class="live-dot${open?'':' off'}"></i>${st}</span></div>`;
+    }).join('');
+    const pct = h => Math.max(0, Math.min(100, (h-AX0)/(AX1-AX0)*100));
+    const nowLine = nowET >= AX0 && nowET <= AX1 ? `<div class="tl-now" style="left:${pct(nowET)}%"></div>` : '';
+    const rows = ZONES.map(z => {
+      const s = z.s + (eo - offsetMin(z.tz,d))/60, e = z.e + (eo - offsetMin(z.tz,d))/60;
+      return `<div class="tl-row"><div>${z.short || z.n}</div><div class="tl-track"><div class="tl-bar${z.team?' team':''}" style="left:${pct(s)}%;width:${pct(e)-pct(s)}%">${lab(z.s)} – ${lab(z.e)} local</div>${nowLine}</div></div>`;
+    }).join('');
+    const ov = ZONES.slice(0,3).map(z => { const s = z.s + (eo - offsetMin(z.tz,d))/60, e = z.e + (eo - offsetMin(z.tz,d))/60; return `<div>${z.n}: <b>${Math.max(0, Math.min(e,tE)-Math.max(s,tS)).toFixed(0)} h</b> shared</div>`; }).join('');
+    const tl = $('timeline'), vis = tl.classList.contains('visible');
+    tl.innerHTML = `<div class="tl-head"><span>Working hours shown in U.S. Eastern Time</span><span>Now: ${lab(Math.floor(nowET))} ET</span></div>${rows}
+      <div class="tl-axis">${[6,10,14,18,22].map(h => `<span>${lab(h)}</span>`).join('')}</div><div class="overlap">${ov}</div>`;
+    if (vis) tl.classList.add('visible');
+  }
+  drawTZ(); setInterval(drawTZ, 30000);
+})();
+</script>
+</body>
+</html>
